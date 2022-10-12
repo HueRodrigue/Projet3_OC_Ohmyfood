@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+        <title>Ohmyfood</title>
+        <link rel="stylesheet" href="./style.css">
+        <link href="https://kit-free.fontawesome.com/releases/latest/css/free-v4-shims.min.css" media="all" rel="stylesheet">
+        <link href="https://kit-free.fontawesome.com/releases/latest/css/free-v4-font-face.min.css" media="all" rel="stylesheet">
+        <link href="https://kit-free.fontawesome.com/releases/latest/css/free.min.css" media="all" rel="stylesheet">
+    </head>
+
+    <body>
+        <header>
+            <!--Logo Ohmyfood-->
+            <figure>
+                <img class="Ohmyfood_logo" src="images/logo/ohmyfood.png" alt="Logo Ohmyfood">
+            </figure>
+        </header>
+        <!--Contenu principal-->
+        <main>
+            <!--Conteneur du formulaire des villes Ohmyfood-->
+            <div class="main_form_container">
+                <form class="main_form_container_form" action="#" method="GET">
+                    <div class="main_form_container_form_marker_container">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <input type="search" class="main_form_container_form_searchInput" placeholder="Paris, Belleville">
+                </form>
+            </div>
+            <!--Section contenant la partie exploration et fonctionnement-->
+            <section class="main_explore_and_working_section">
+                <!--Partie exploration-->
+                <article class="main_explore_and_working_section_explore_article">
+                    <h1>
+                        Réservez le menu qui vous convient
+                    </h1>
+                    <p>
+                        découvrez des restaurants d'exception, sélectionnés par nos soins.
+                    </p>
+                    <button type="button">Explorer nos restaurants</button> 
+                </article>
+                <!--Partie fonctionnement-->
+                <article class="main_explore_and_working_section_working_article">
+                    <h2>
+                        Fonctionnement
+                    </h2>
+                    <ul class="main_explore_and_working_section_working_article_list">
+                        <li class="main_explore_and_working_section_working_article_list_items">
+                            <i class="fas fa-mobile-alt main_explore_and_working_section_working_article_list_item_icon"></i>
+                            <span class="main_explore_and_working_section_working_article_list_item_text">
+                                Choisissez un restaurant
+                            </span>
+                        </li>
+                        <li class="main_explore_and_working_section_working_article_list_items">
+                            <i class="fas fa-list-ul main_explore_and_working_section_working_article_list_item_icon"></i>
+                            <span class="main_explore_and_working_section_working_article_list_item_text">
+                                Composez votre menu
+                            </span>
+                        </li>
+                        <li class="main_explore_and_working_section_working_article_list_items">
+                            <i class="fas fa-store main_explore_and_working_section_working_article_list_item_icon"></i>
+                            <span class="main_explore_and_working_section_working_article_list_item_text">
+                                Dégustez au restaurant
+                            </span>
+                        </li>
+                    </ul>
+                </article>
+            </section>
+            <!--Secttion contenant les restaurants-->
+            <section class="main_restaurants_section">
+                <h2>
+                    Restaurants
+                </h2>
+                <!--Partie contenant la lists des restaurants-->
+                <article class="main_restaurants_section_article_list" >
+                    <!--Carte restaurants-->
+                    <a class="main_restaurants_section_article_list_item" href="./restaurants_pages/la_palette_du_gout.html">
+                        <figure>
+                            <!--Image du restaurant-->
+                            <img src="./images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="La palette du goût" class="main_restaurants_section_article_list_item_image">
+                            <!--Badge-->
+                            <span class="main_restaurants_section_article_list_item_badge">Nouveau</span>
+                            <!--Description-->
+                            <figcaption class="main_restaurants_section_article_list_item_description">
+                                <h3>
+                                    La palette du goût
+                                </h3>
+                                <span>
+                                    Ménilmontant
+                                </span>
+                                <!--Partie j'aime du restaurant-->
+                                <div class="main_restaurants_section_article_list_item_description_heart">
+                                    <i class="fa fa-heart-o main_restaurants_section_article_list_item_description_heart_1"></i>
+                                    <i class="fa fa-heart main_restaurants_section_article_list_item_description_heart_2"></i>
+                                </div>
+                            </figcaption>
+                        </figure>
+                    </a>
+                </article>
+            </section>
+        </main>
+        <!--Contenu bas de page-->
+        <footer>
+            <!--Logo Ohmyfood-->
+            <img class="Ohmyfood_logo" src="images/logo/ohmyfood.png" alt="Logo Ohmyfood">
+            <!--Liste des actions du site-->
+            <ul  class="footer_list">
+                <li class="footer_list_item">
+                    <a class="footer_list_item_link" href="#"><i class="fas fa-utensils footer_list_item_icon"></i>Proposer un restaurant</a>
+                </li>
+                <li class="footer_list_item">
+                    <a class="footer_list_item_link" href="#"><i class="fas fa-hands-helping footer_list_item_icon"></i>Devenir partenaire</a>
+                </li>
+                <li class="footer__list_item">
+                    <a class="footer_list_item_link" href="#">Mentions légales</a>
+                  </li>
+                  <li class="footer__list_item">
+                    <a class="footer_list_item_link" href="mailto:contact@ohmyfood.com">Contact</a>
+                  </li>
+            </ul>
+        </footer>
+    </body>
+</html>
