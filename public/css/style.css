@@ -1,0 +1,328 @@
+.menu_section_dessert h3, .menu_section_dish h3, .menu_section_entry h3 {
+  text-transform: uppercase;
+  padding-top: 10px;
+  position: relative;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Roboto";
+}
+
+#Content_container {
+  max-width: 768px;
+}
+
+header h1 {
+  text-align: center;
+}
+
+h1 {
+  font-family: "Shrikhand";
+}
+
+h2 {
+  font-weight: bold;
+}
+
+.item_description, .item, .main_title, .restaurant_header, .restaurants_list_item_description_heart, .restaurants_list_item_description, .restaurants_article_list, .working_article_list_item_number, .working_article_list_items, .working_article, .explore_article, .explore_and_working_section, .city_form {
+  display: flex;
+}
+
+.restaurants_list_item_description, .restaurants_article_list, .working_article, .explore_article, .explore_and_working_section {
+  flex-direction: column;
+}
+
+.menu_section_dessert h3::before, .menu_section_dish h3::before, .menu_section_entry h3::before {
+  content: "";
+  position: absolute;
+  width: 10%;
+  height: 1px;
+  bottom: 0;
+  border-bottom: 2px solid rgb(153, 226, 208);
+}
+
+.item, .btn, .restaurants_list_item figure, .working_article_list_items {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.city_form {
+  background-color: #bfbfbf;
+  align-items: center;
+  justify-content: center;
+  box-shadow: inset 0px 11px 8px -10px rgba(0, 0, 0, 0.5);
+  padding-left: 50px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.city_form_input {
+  background-color: #bfbfbf;
+  outline: none;
+  border: none;
+  padding-left: 10px;
+}
+
+.city_form_input::placeholder {
+  color: black;
+  font-weight: bold;
+}
+
+.explore_article {
+  background-color: #f2f2f2;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 25px;
+  background-color: #f2f2f2;
+}
+
+.explore_article > * {
+  margin: 10px;
+}
+
+.explore_article h2 {
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+.working_article {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  width: 100%;
+}
+
+.working_article h3 {
+  padding: 10px;
+}
+
+.working_article_list_items {
+  background-color: #f2f2f2;
+  margin-bottom: 15px;
+  padding: 20px;
+  margin-left: 15px;
+  margin-right: 15px;
+  border-radius: 15px;
+}
+
+.working_article_list_item_icon {
+  width: 20px;
+  height: 20px;
+  color: #bfbfbf;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding-left: 15px;
+  padding-right: 30px;
+}
+
+.working_article_list_item_text {
+  font-weight: bold;
+}
+
+.working_article_list_item_number {
+  background-color: rgb(147, 86, 220);
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(147, 86, 220);
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  color: white;
+  margin-left: -30px;
+}
+
+.working_article_list_items:last-child > .working_article_list_item_description {
+  background-color: rgb(245, 237, 255);
+}
+
+.working_article_list_items:last-child .working_article_list_item_icon {
+  color: rgb(147, 86, 220);
+}
+
+.restaurants_section h3 {
+  padding: 10px;
+}
+
+.restaurants_section {
+  background-color: #f2f2f2;
+  padding-bottom: 50px;
+  padding-top: 50px;
+}
+
+.restaurants_list_item {
+  text-decoration: none;
+  color: black;
+}
+
+.restaurants_list_item figure {
+  background-color: white;
+  border-radius: 15px;
+  position: relative;
+  display: block;
+  margin: 10px;
+}
+
+.restaurants_list_item_image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.restaurants_list_item_description {
+  flex-wrap: wrap;
+  height: 50px;
+  padding: 10px;
+}
+
+.restaurants_list_item_badge {
+  background-color: rgb(153, 226, 208);
+  color: #278870;
+  font-weight: bold;
+  padding: 10px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.btn {
+  background: linear-gradient(160deg, rgb(237, 115, 218), rgb(161, 91, 220));
+  border: none;
+  border-radius: 30px;
+  padding: 15px;
+  margin-bottom: 40px;
+  color: white;
+}
+
+.restaurants_list_item_description_heart {
+  flex-grow: 1;
+  height: 100%;
+  align-items: center;
+  justify-content: right;
+}
+
+.restaurants_list_item_description_heart_1, .restaurants_list_item_description_heart_2 {
+  font-size: 25px;
+}
+
+.restaurants_list_item_description_heart_2 {
+  visibility: hidden;
+}
+
+/* Page Restaurant */
+.restaurant_header {
+  align-items: center;
+}
+
+.restaurant_header h1 {
+  margin: auto;
+}
+
+.header_return {
+  padding-left: 10px;
+  text-decoration: none;
+  color: black;
+}
+
+/* Banniere*/
+.restaurant_main {
+  background-color: #f2f2f2;
+}
+
+.main_banner {
+  width: 100%;
+  z-index: 1;
+}
+
+.main_banner_image {
+  width: 100%;
+  max-height: 250px;
+  object-fit: cover;
+  box-shadow: inset 0px 11px 8px -10px rgba(0, 0, 0, 0.5);
+}
+
+.menu_section {
+  transform: translateY(-50px);
+  z-index: 2;
+  background-color: white;
+  padding: 20px;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+  background-color: #f2f2f2;
+}
+
+.main_title {
+  font-family: "Shrikhand";
+  font-weight: bold;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.main_title_heart_1 {
+  font-size: 25px;
+}
+
+/* Menu*/
+.item {
+  background-color: white;
+  text-decoration: none;
+  color: black;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 92%;
+  padding: 20px;
+  border-radius: 15px;
+}
+
+.item_description {
+  width: 100%;
+  justify-content: space-between;
+}
+
+.item_validate {
+  display: none;
+}
+
+.item_description_price {
+  align-self: flex-end;
+  font-weight: bold;
+}
+
+footer {
+  padding: 20px;
+  background-color: rgb(53, 53, 53);
+}
+
+footer h1 {
+  color: white;
+  font-size: large;
+  font-weight: normal;
+}
+
+.footer_list {
+  list-style: none;
+  padding-top: 10px;
+}
+
+.footer_list_item {
+  padding-top: 10px;
+}
+
+.footer_list_item_link {
+  text-decoration: none;
+  color: white;
+}
+
+.footer_list_item_icon {
+  width: 10px;
+  height: 10px;
+  padding-right: 15px;
+}
+
+/*# sourceMappingURL=style.css.map */

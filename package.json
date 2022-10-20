@@ -1,0 +1,19 @@
+{
+  "name": "projet3_oc_ohmyfood",
+  "version": "1.0.0",
+  "description": "��#\u0000 \u0000P\u0000r\u0000o\u0000j\u0000e\u0000t\u00003\u0000_\u0000O\u0000C\u0000_\u0000O\u0000h\u0000m\u0000y\u0000f\u0000o\u0000o\u0000d\u0000\r\u0000 \u0000",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/main.scss:./public/css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HueRodrigue/Projet3_OC_Ohmyfood.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HueRodrigue/Projet3_OC_Ohmyfood/issues"
+  },
+  "homepage": "https://github.com/HueRodrigue/Projet3_OC_Ohmyfood#readme"
+}

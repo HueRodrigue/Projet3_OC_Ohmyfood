@@ -5,7 +5,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
         <title>Ohmyfood</title>
-        <link rel="stylesheet" href="./style.css">
+        <link rel="stylesheet" href="./public/css/style.css">
         <link href="https://kit-free.fontawesome.com/releases/latest/css/free-v4-shims.min.css" media="all" rel="stylesheet">
         <link href="https://kit-free.fontawesome.com/releases/latest/css/free-v4-font-face.min.css" media="all" rel="stylesheet">
         <link href="https://kit-free.fontawesome.com/releases/latest/css/free.min.css" media="all" rel="stylesheet">
@@ -25,7 +25,7 @@
             <main>
                 <!--Formulaire des villes Ohmyfood-->
                 <form class="city_form" action="#" method="GET">
-                    <div class="city_form_marker">
+                    <div class="city__form--marker">
                         <i class="fas fa-map-marker-alt"></i>
                     </div>
                     <input type="search" class="city_form_input" placeholder="Paris, Belleville">
@@ -40,7 +40,7 @@
                         <p>
                             découvrez des restaurants d'exception, sélectionnés par nos soins.
                         </p>
-                        <button type="button">Explorer nos restaurants</button> 
+                        <button type="button" class="btn">Explorer nos restaurants</button> 
                     </article>
                     <!--Partie fonctionnement-->
                     <article class="working_article">
@@ -91,9 +91,8 @@
                                 <!--Image du restaurant-->
                                 <img src="./images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="La palette du goût" class="restaurants_list_item_image">
                                 <!--Badge-->
-                                <div class="restaurants_list_item_badge_container">
-                                    <span class="restaurants_list_item_badge">Nouveau</span>
-                                </div>
+                                <span class="restaurants_list_item_badge">Nouveau</span>
+                                
                                 <!--Description-->
                                 <figcaption class="restaurants_list_item_description">
                                     <h4>
@@ -116,9 +115,7 @@
                                 <!--Image du restaurant-->
                                 <img src="./images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="La note enchantée" class="restaurants_list_item_image">
                                 <!--Badge-->
-                                <div class="restaurants_list_item_badge_container">
-                                    <span class="restaurants_list_item_badge">Nouveau</span>
-                                </div>
+                                <span class="restaurants_list_item_badge">Nouveau</span>
                                 <!--Description-->
                                 <figcaption class="restaurants_list_item_description">
                                     <h4>

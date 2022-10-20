@@ -1,0 +1,367 @@
+@import "./utils/_variables.scss";
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    font-family: $text_police;
+}
+
+#Content_container{
+    max-width: 768px;
+}
+
+header h1{
+    @include text_center
+}
+
+h1{
+    font-family:  $title_police;
+}
+h2{
+    font-weight: bold;
+}
+
+%flex_parameter{
+    display: flex;
+}
+
+%column_parameter{
+    flex-direction: column;
+}
+
+
+
+%menu_section_before_params{
+    content: "";
+    position: absolute;
+    width: 10%;
+    height: 1px;
+    bottom: 0;
+    border-bottom: 2px solid $primary_badge_color;
+}
+
+%box_shadow{
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.city_form{
+    @include set_background_color($secondary_color);
+    @include centering_content;
+    @extend %flex_parameter;
+    box-shadow: inset 0px 11px 8px -10px rgba(0, 0, 0, 0.5);
+    padding-left: 50px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.city_form_input{
+    @include set_background_color($secondary_color);
+    outline: none;
+    border: none;
+    padding-left: 10px;
+}
+
+.city_form_input::placeholder{
+    color: black;
+    font-weight: bold;
+}
+
+.explore_and_working_section{
+    @extend %flex_parameter;
+    @extend %column_parameter;
+}
+
+.explore_article{
+    @include set_background_color($primary_color);
+    @include centering_content;
+    @include text_center;
+    @extend %flex_parameter;
+    @extend %column_parameter;
+    padding: 25px;
+    background-color: #f2f2f2;
+}
+
+.explore_article > * {
+    margin: 10px;
+}
+
+.explore_article h2 {
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+
+.working_article {
+    @extend %flex_parameter;
+    @extend %column_parameter;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    width: 100%;
+}
+
+.working_article h3{
+    padding: 10px;
+}
+
+.working_article_list_items{
+    @extend %box_shadow;
+    @extend %flex_parameter;
+    @include set_background_color($primary_color);
+    margin-bottom: 15px;
+    padding: 20px;
+    margin-left: 15px;
+    margin-right: 15px;
+    border-radius: 15px;
+    
+}
+
+.working_article_list_item_icon{
+    width: 20px;
+    height: 20px;
+    color: $secondary_color;
+    @include centering_content;
+    text-align: center;
+    padding-left: 15px;
+    padding-right: 30px;
+}
+
+.working_article_list_item_text{
+    font-weight: bold;
+}
+
+.working_article_list_item_number{
+    @include set_background_color($tertiary_color);
+    @extend %flex_parameter;
+    @include centering_content;
+    @include set_background_color($tertiary_color);
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    color: $basic_color;
+    margin-left: -30px;
+}
+
+.working_article_list_items:last-child > .working_article_list_item_description{
+    background-color: rgb(245, 237, 255);
+}
+
+.working_article_list_items:last-child .working_article_list_item_icon{
+    color: $tertiary_color;
+}
+
+.restaurants_section h3{
+    padding: 10px;
+}
+
+.restaurants_section{
+    @include set_background_color($primary_color);
+    padding-bottom: 50px;
+    padding-top: 50px;
+}
+
+.restaurants_article_list{
+    @extend %flex_parameter;
+    @extend %column_parameter;
+}
+
+.restaurants_list_item{
+    text-decoration: none;
+    color: black;
+}
+
+.restaurants_list_item figure{
+    @include set_background_color($basic_color);
+    @extend %box_shadow;
+    border-radius: 15px;
+    position: relative;
+    display: block;
+    margin: 10px;
+}
+
+.restaurants_list_item_image{
+    width: 100%;
+    height:200px;
+    object-fit: cover;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.restaurants_list_item_description{
+    @extend %flex_parameter;
+    @extend %column_parameter;
+    flex-wrap: wrap;
+    height: 50px;
+    padding: 10px;
+}
+
+
+.restaurants_list_item_badge{
+    @include set_background_color($primary_badge_color);
+    color: $secondary_badge_color;
+    font-weight: bold;
+    padding: 10px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.btn{
+    @extend %box_shadow;
+    @include btn_style;
+}
+
+.restaurants_list_item_description_heart{
+    @extend %flex_parameter;
+    flex-grow: 1;
+    height: 100%;
+    align-items: center;
+    justify-content: right;
+
+}
+.restaurants_list_item_description_heart_1, .restaurants_list_item_description_heart_2{
+    font-size: 25px;
+}
+
+.restaurants_list_item_description_heart_2{
+    visibility: hidden;
+}
+
+/* Page Restaurant */
+.restaurant_header{
+    @extend %flex_parameter;
+    align-items: center;
+}
+
+.restaurant_header h1{
+    margin: auto;
+}
+.header_return{
+    padding-left: 10px;
+    text-decoration: none;
+    color: black;
+}
+/* Banniere*/
+
+.restaurant_main{
+    @include set_background_color($primary_color);
+}
+.main_banner{
+    width:100%;
+    z-index: 1;
+    
+}
+.main_banner_image{
+    width: 100%;
+    max-height: 250px;
+    object-fit: cover;
+    box-shadow: inset 0px 11px 8px -10px rgba(0, 0, 0, 0.5);
+}
+
+.menu_section{
+    transform: translateY(-50px);
+    z-index: 2;
+    background-color: $basic_color;
+    padding: 20px;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    @include set_background_color($primary_color);
+}
+
+.main_title{
+    @extend %flex_parameter;
+    font-family: $title_police;
+    font-weight: bold;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.main_title_heart_1{
+    font-size: 25px;
+}
+
+/* Menu*/
+
+.menu_section_entry h3{
+    @extend %menu_section_params;
+}
+
+.menu_section_dish h3{
+    @extend %menu_section_params;
+}
+
+.menu_section_dessert h3{
+    @extend%menu_section_params;
+}
+
+.menu_section_entry h3::before{
+    @extend %menu_section_before_params;
+}
+
+.menu_section_dish h3::before{
+    @extend %menu_section_before_params;
+}
+.menu_section_dessert h3::before{
+    @extend %menu_section_before_params;
+}
+
+.item{
+    @extend %box_shadow;
+    @include set_background_color($basic_color);
+    @extend %flex_parameter;
+    text-decoration: none;
+    color: black;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 92%;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.item_description{
+    @extend %flex_parameter;
+    width: 100%;
+    justify-content: space-between;
+}
+.item_validate{
+    display: none;
+}
+
+.item_description_price{
+    align-self: flex-end;
+    font-weight: bold;
+}
+
+
+footer{
+    padding: 20px;
+    background-color: rgb(53, 53, 53);
+}
+
+footer h1{
+    color: $basic_color;
+    font-size: large;
+    font-weight: normal;
+}
+
+.footer_list{
+    list-style: none;
+    padding-top: 10px;
+}
+
+.footer_list_item{
+    padding-top: 10px;
+}
+
+.footer_list_item_link{
+    text-decoration: none;
+    color: white;
+}
+
+.footer_list_item_icon{
+    width: 10px;
+    height: 10px;
+    padding-right: 15px;
+}

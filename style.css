@@ -50,6 +50,7 @@
     .explore_and_working_section{
         display: flex;
         flex-direction: column;
+        width: 100%;
     }
 
     .explore_article{
@@ -91,6 +92,7 @@
         flex-direction: column;
         padding-top: 50px;
         padding-bottom: 50px;
+        width: 100%;
     }
 
     .working_article h3{
@@ -100,18 +102,12 @@
     .working_article_list_items{
         display: flex;
         align-items: center;
-        margin: 10px;
         margin-bottom: 15px;
-    }
-
-    .working_article_list_item_description{
         padding: 20px;
-        width: 96%;
+        margin-left: 15px;
+        width: 82%;
         background-color: #F2F2F2;
         border-radius: 15px;
-        position: relative;
-        left: -10px;
-        z-index: 0;
         box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
     }
 
@@ -129,11 +125,14 @@
 
     .working_article_list_item_number{
         border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         width: 20px;
+        height: 20px;
         color: white;
         background-color: rgb(147, 86, 220);
-        text-align: center;
-        z-index: 1;
+        margin-left: -30px;
     }
 
     .working_article_list_items:last-child > .working_article_list_item_description{
@@ -165,21 +164,16 @@
     .restaurants_list_item{
         text-decoration: none;
         color: black;
+
     }
     .restaurants_list_item figure{
-        display: flex;
-        flex-direction: column;
         background-color: white;
-        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-        margin: 10px;
         border-radius: 15px;
+        position: relative;
+        display: block;
+        margin: 10px;
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
     }
-    .restaurants_list_item_badge_container{
-        position: absolute;
-        width: 0px;
-        height: 0px;
-    }
-
 
     .restaurants_list_item_image{
         width: 100%;
@@ -193,12 +187,10 @@
         background-color: rgb(153, 226, 208);
         color: rgb(36, 156, 127);
         font-weight: bold;
-        width: 100px;
         padding: 10px;
-        text-align: center;
-        position: relative;
-        left :275px; 
-        top: 25px;
+        position: absolute;
+        top: 10px;
+        right: 10px;
     }
 
     .restaurants_list_item_description{
