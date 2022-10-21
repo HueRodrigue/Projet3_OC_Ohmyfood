@@ -94,7 +94,7 @@ h2 {
   font-weight: bold;
 }
 
-.item_description, .item, .main_title, .restaurant_header, .restaurants_list_item_description_heart, .restaurants_list_item_description, .restaurants_article_list, .working_article_list_item_number, .working_article_list_items, .working_article, .explore_article, .explore_and_working_section, .city_form {
+.main_submitbutton, .item_description, .item, .main_title, .restaurant_header, .restaurants_list_item_description_heart, .restaurants_list_item_description, .restaurants_article_list, .working_article_list_item_number, .working_article_list_items, .working_article, .explore_article, .explore_and_working_section, .city_form {
   display: flex;
 }
 
@@ -340,18 +340,33 @@ h2 {
   color: black;
   margin-top: 20px;
   margin-bottom: 20px;
-  width: 92%;
-  padding: 20px;
+  align-items: center;
+  width: 100%;
+  height: 70px;
   border-radius: 15px;
 }
 
 .item_description {
   width: 100%;
   justify-content: space-between;
+  padding: 20px;
 }
 
-.item_validate {
-  display: none;
+.item_description {
+  min-width: 0px;
+}
+.item_description .item_description_text {
+  min-width: 0px;
+}
+.item_description .item_description_text h4 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.item_description .item_description_text p {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .item_description_price {
@@ -359,6 +374,58 @@ h2 {
   font-weight: bold;
 }
 
+.main_submitbutton {
+  align-items: center;
+  justify-content: center;
+}
+
+/* Coloration coeur */
+.main_title_heart_1 {
+  font-size: 20px;
+  color: transparent;
+  -webkit-text-stroke: 1px darkslategray;
+  stroke-width: 50;
+}
+
+.main_title_heart_1:hover {
+  background: linear-gradient(#FF79DA, #9356DC);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 1px transparent;
+  transition: 200ms ease-in-out;
+}
+
+.item_validate {
+  display: none;
+  background-color: #99E2D0;
+  color: #FFF;
+  font-size: 20px;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  width: 100px;
+  height: 100%;
+}
+
+.item_validate i {
+  transform: rotate(0);
+  transition: transform 750ms ease;
+}
+
+.item:hover .item_validate {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: slide 2s;
+}
+
+@keyframes slide {
+  from {
+    width: 0px;
+  }
+  to {
+    width: 100px;
+  }
+}
 footer {
   padding: 20px;
   background-color: rgb(53, 53, 53);
