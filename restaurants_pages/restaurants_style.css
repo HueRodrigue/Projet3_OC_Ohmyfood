@@ -55,7 +55,6 @@
     .menu_section{
         transform: translateY(-50px);
         z-index: 2;
-        background-color: white;
         padding: 20px;
         border-top-left-radius: 40px;
         border-top-right-radius: 40px;
