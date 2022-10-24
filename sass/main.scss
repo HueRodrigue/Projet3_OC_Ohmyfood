@@ -6,7 +6,7 @@
       opacity: 0;
       z-index: -10;
     }
-  }
+}
 
   @keyframes jump {
     0% {
@@ -21,7 +21,38 @@
     100% {
       transform: translateY(0);
     }
-  }
+}
+
+@keyframes slide{
+    from{width: 0px;}
+    to{
+        width:100px
+    }
+}
+
+/* Classe muette */
+%flex_parameter{
+    display: flex;
+}
+
+%column_parameter{
+    flex-direction: column;
+}
+
+
+
+%menu_section_before_params{
+    content: "";
+    position: absolute;
+    width: 10%;
+    height: 1px;
+    bottom: 0;
+    border-bottom: 2px solid $primary_badge_color;
+}
+
+%box_shadow{
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
 
   .loader {
     position: fixed;
@@ -70,10 +101,11 @@
 body{
     font-family: $text_police;
 }
-
-#Content_container{
-    max-width: 768px;
+.Content_container{
+    max-width: 1400px;
+    margin: auto;
 }
+
 
 header h1{
     @include text_center
@@ -86,45 +118,26 @@ h2{
     font-weight: bold;
 }
 
-%flex_parameter{
-    display: flex;
-}
-
-%column_parameter{
-    flex-direction: column;
-}
-
-
-
-%menu_section_before_params{
-    content: "";
-    position: absolute;
-    width: 10%;
-    height: 1px;
-    bottom: 0;
-    border-bottom: 2px solid $primary_badge_color;
-}
-
-%box_shadow{
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-}
-
 .city_form{
-    @include set_background_color($secondary_color);
+    @include flex_parameter;
+    @include set_background_color($primary_color);
     @include centering_content;
-    @extend %flex_parameter;
-    box-shadow: inset 0px 11px 8px -10px rgba(0, 0, 0, 0.5);
     padding-left: 50px;
-    padding-top: 15px;
-    padding-bottom: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 15px;
+    width: 200px;
+    height: 50px;
+    margin: auto;
 }
 
 .city_form_input{
-    @include set_background_color($secondary_color);
+    @include set_background_color($primary_color);
     outline: none;
     border: none;
     padding-left: 10px;
 }
+
 
 .city_form_input::placeholder{
     color: black;
@@ -132,18 +145,20 @@ h2{
 }
 
 .explore_and_working_section{
-    @extend %flex_parameter;
-    @extend %column_parameter;
+    @include flex_parameter;
+    @include column_parameter;
 }
 
+
 .explore_article{
-    @include set_background_color($primary_color);
     @include centering_content;
     @include text_center;
-    @extend %flex_parameter;
-    @extend %column_parameter;
+    @include flex_parameter;
+    @include column_parameter;
     padding: 25px;
-    background-color: #f2f2f2;
+    margin: 1%;
+    border-radius: 15px;
+    @include set_background_color(rgb(245, 237, 255));
 }
 
 .explore_article > * {
@@ -155,10 +170,9 @@ h2{
     padding-left: 20px;
 }
 
-
 .working_article {
-    @extend %flex_parameter;
-    @extend %column_parameter;
+    @include flex_parameter;
+    @include column_parameter;
     padding-top: 50px;
     padding-bottom: 50px;
     width: 100%;
@@ -168,15 +182,19 @@ h2{
     padding: 10px;
 }
 
+.working_article_list{
+    @include flex_parameter;
+}
 .working_article_list_items{
-    @extend %box_shadow;
-    @extend %flex_parameter;
+    @include box_shadow;
+    @include flex_parameter;
     @include set_background_color($primary_color);
     margin-bottom: 15px;
     padding: 20px;
     margin-left: 15px;
     margin-right: 15px;
     border-radius: 15px;
+    width: 30%;
     
 }
 
@@ -196,7 +214,7 @@ h2{
 
 .working_article_list_item_number{
     @include set_background_color($tertiary_color);
-    @extend %flex_parameter;
+    @include flex_parameter;
     @include centering_content;
     @include set_background_color($tertiary_color);
     border-radius: 50%;
@@ -206,7 +224,7 @@ h2{
     margin-left: -30px;
 }
 
-.working_article_list_items:last-child > .working_article_list_item_description{
+.working_article_list_items:last-child {
     background-color: rgb(245, 237, 255);
 }
 
@@ -222,21 +240,25 @@ h2{
     @include set_background_color($primary_color);
     padding-bottom: 50px;
     padding-top: 50px;
+    border-radius: 20px;
+    margin: 1%;
 }
 
 .restaurants_article_list{
-    @extend %flex_parameter;
-    @extend %column_parameter;
+    @include flex_parameter;
+    flex-wrap: wrap;
+    margin: auto;
 }
 
 .restaurants_list_item{
     text-decoration: none;
     color: black;
+    width: 50%;
 }
 
 .restaurants_list_item figure{
     @include set_background_color($basic_color);
-    @extend %box_shadow;
+    @include box_shadow;
     border-radius: 15px;
     position: relative;
     display: block;
@@ -252,8 +274,8 @@ h2{
 }
 
 .restaurants_list_item_description{
-    @extend %flex_parameter;
-    @extend %column_parameter;
+    @include flex_parameter;
+    @include column_parameter;
     flex-wrap: wrap;
     height: 50px;
     padding: 10px;
@@ -271,12 +293,12 @@ h2{
 }
 
 .btn{
-    @extend %box_shadow;
+    @include box_shadow;
     @include btn_style;
 }
 
 .restaurants_list_item_description_heart{
-    @extend %flex_parameter;
+    @include flex_parameter;
     flex-grow: 1;
     height: 100%;
     align-items: center;
@@ -293,7 +315,7 @@ h2{
 
 /* Page Restaurant */
 .restaurant_header{
-    @extend %flex_parameter;
+    @include flex_parameter;
     align-items: center;
 }
 
@@ -309,6 +331,9 @@ h2{
 
 .restaurant_main{
     @include set_background_color($primary_color);
+    margin-bottom: 40px;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
 }
 .main_banner{
     width:100%;
@@ -330,14 +355,18 @@ h2{
     border-top-left-radius: 40px;
     border-top-right-radius: 40px;
     @include set_background_color($primary_color);
+    display: flex;
+    flex-wrap: wrap;
+ 
 }
 
 .main_title{
-    @extend %flex_parameter;
+    @include flex_parameter;
     font-family: $title_police;
     font-weight: bold;
     align-items: center;
     justify-content: space-between;
+    width: 100%;
 }
 
 .main_title_heart_1{
@@ -345,34 +374,38 @@ h2{
 }
 
 /* Menu*/
-
+.menu_section_entry,.menu_section_dish,.menu_section_dessert{
+    width: 45%;
+    margin-left: auto;
+    margin-right: auto;
+}
 .menu_section_entry h3{
-    @extend %menu_section_params;
+    @include menu_section_params;
 }
 
 .menu_section_dish h3{
-    @extend %menu_section_params;
+    @include menu_section_params;
 }
 
 .menu_section_dessert h3{
-    @extend%menu_section_params;
+    @include menu_section_params;
 }
 
 .menu_section_entry h3::before{
-    @extend %menu_section_before_params;
+    @include menu_section_before_params;
 }
 
 .menu_section_dish h3::before{
-    @extend %menu_section_before_params;
+    @include menu_section_before_params;
 }
 .menu_section_dessert h3::before{
-    @extend %menu_section_before_params;
+    @include menu_section_before_params;
 }
 
 .item{
-    @extend %box_shadow;
+    @include box_shadow;
     @include set_background_color($basic_color);
-    @extend %flex_parameter;
+    @include flex_parameter;
     text-decoration: none;
     color: black;
     margin-top: 20px;
@@ -385,7 +418,7 @@ h2{
 }
 
 .item_description{
-    @extend %flex_parameter;
+    @include flex_parameter;
     width: 100%;
     justify-content: space-between;
     padding: 20px;
@@ -415,7 +448,7 @@ min-width: 0px;
 }
 
 .main_submitbutton{
-    @extend %flex_parameter;
+    @include flex_parameter;
     @include centering_content;
 }
 /* Coloration coeur */
@@ -429,8 +462,8 @@ min-width: 0px;
 
   .main_title_heart_1:hover{
      background: linear-gradient(#FF79DA, #9356DC);
-    -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
     -webkit-text-stroke: 1px transparent;
     transition: 200ms ease-in-out;
   }
@@ -456,16 +489,9 @@ min-width: 0px;
     justify-content: center;
     animation: slide 2s;
   }
- @keyframes slide{
-    from{width: 0px;}
-    to{
-        width:100px
-    }
- }
-  
-  
-  
+
 footer{
+    width: auto;
     padding: 20px;
     background-color: rgb(53, 53, 53);
 }
@@ -479,6 +505,8 @@ footer h1{
 .footer_list{
     list-style: none;
     padding-top: 10px;
+    @include flex_parameter;
+    justify-content: space-between;
 }
 
 .footer_list_item{
@@ -494,4 +522,101 @@ footer h1{
     width: 10px;
     height: 10px;
     padding-right: 15px;
+}
+
+
+@media(max-width:992px) {
+    .Content_container{
+        max-width: 992px;
+    }
+    .working_article_list{
+        @include column_parameter;
+    }
+    .working_article_list_items{
+        width: auto;
+    }
+    /* Menu*/
+    .menu_section_entry,.menu_section_dish,.menu_section_dessert{
+    width: 100%;
+    margin: auto;
+    }
+    .menu_section{
+        @include column_parameter;
+    }
+}
+
+
+
+@media(max-width:768px){
+#Content_container{
+    max-width: 768px;
+}
+
+.city_form{
+    @include flex_parameter;
+    @include set_background_color($secondary_color);
+    @include centering_content;
+    box-shadow: inset 0px 11px 8px -10px rgba(0, 0, 0, 0.5);
+    border-radius: 0px;
+    width: 100%;
+    padding-left: 20px;
+}
+
+.city_form_input{
+    @include set_background_color($secondary_color);
+    outline: none;
+    border: none;
+    padding-left: 10px;
+}
+
+.explore_and_working_section{
+    @include column_parameter;
+}
+
+.explore_article{
+    width: auto;
+    margin: 0px;
+    border-radius: 0px;
+}
+
+.explore_article{
+    @include set_background_color($primary_color);
+}
+
+.working_article_list{
+    @include column_parameter;
+}
+.working_article_list_items{
+    width: auto;
+}
+
+.restaurants_section{
+    border-radius: 0px ;
+    margin : 0px;
+}
+
+.restaurants_article_list{
+    @include column_parameter;
+    width: auto;
+}
+
+.restaurants_list_item{
+    width: 100%;
+}
+
+/* Menu*/
+.menu_section_entry,.menu_section_dish,.menu_section_dessert{
+    width: 100%;
+}
+
+.restaurant_main{
+    @include set_background_color($primary_color);
+    margin-bottom: 0px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+
+  .footer_list{
+    @include column_parameter;
+  }
 }
