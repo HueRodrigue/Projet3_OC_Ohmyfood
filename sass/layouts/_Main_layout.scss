@@ -1,0 +1,192 @@
+main{
+    .city_form{
+        @extend %flex_parameter;
+        @include set_background_color($primary_color);
+        @include centering_content;
+        padding-left: 50px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        border-radius: 15px;
+        width: 200px;
+        height: 50px;
+        margin: auto;
+        &_input{
+            outline: none;
+            border: none;
+            padding-left: 10px;
+            @include set_background_color($primary_color);
+        }
+        &_input::placeholder{
+            color: black;
+            font-weight: bold;
+        }
+    }
+
+    .explore_and_working_section{
+        @extend %flex_parameter;
+        @include column_parameter;
+
+        .explore_article{
+            @include centering_content;
+            @include text_center;
+            @extend %flex_parameter;
+            @include column_parameter;
+            padding: 25px;
+            margin: 1%;
+            border-radius: 15px;
+            @include set_background_color(rgb(245, 237, 255));
+    
+            &_title{
+                padding-right: 20px;
+                padding-left: 20px;
+            }
+
+            .btn{
+                @include box_shadow;
+                @include btn_style;
+            }
+        }
+    
+        .explore_article > * {
+            margin: 10px;
+        }
+        .working_article {
+            @extend %flex_parameter;
+            @include column_parameter;
+            padding-top: 50px;
+            padding-bottom: 50px;
+            width: 100%;
+
+            h3{
+                padding: 10px;
+            }
+
+            &_list{
+                @extend %flex_parameter;
+
+                &_item{
+                    @include box_shadow;
+                    @extend %flex_parameter;
+                    @include set_background_color($primary_color);
+                    margin-bottom: 15px;
+                    padding: 20px;
+                    margin-left: 15px;
+                    margin-right: 15px;
+                    border-radius: 15px;
+                    width: 30%;
+
+                    &_icon{
+                        width: 20px;
+                        height: 20px;
+                        color: $secondary_color;
+                        @include centering_content;
+                        text-align: center;
+                        padding-left: 15px;
+                        padding-right: 30px;
+                    }
+
+                    &_text{
+                        font-weight: bold;
+                    }
+
+                    &_number{
+                        @include set_background_color($tertiary_color);
+                        @extend %flex_parameter;
+                        @include centering_content;
+                        @include set_background_color($tertiary_color);
+                        border-radius: 50%;
+                        width: 20px;
+                        height: 20px;
+                        color: $basic_color;
+                        margin-left: -30px;
+                    }
+                }
+                &_item:last-child{
+                    background-color: rgb(245, 237, 255);
+
+                    .working_article_list_item_icon{
+                        color: $tertiary_color;
+                    }
+                }
+            }
+        }
+
+    }  
+
+    .restaurants_section{
+        @include set_background_color($primary_color);
+        padding-bottom: 50px;
+        padding-top: 50px;
+        border-radius: 20px;
+        margin: 1%;
+
+        h3{
+            padding: 10px;
+        }
+
+        .restaurants_article_list{
+            @extend %flex_parameter;
+            flex-wrap: wrap;
+            margin: auto;
+
+            .restaurants_list_item{
+                text-decoration: none;
+                color: black;
+                width: 50%;
+
+                figure{
+                    @include set_background_color($basic_color);
+                    @include box_shadow;
+                    border-radius: 15px;
+                    position: relative;
+                    display: block;
+                    margin: 10px;
+                }
+
+                &_image{
+                    width: 100%;
+                    height:200px;
+                    object-fit: cover;
+                    border-top-left-radius: 15px;
+                    border-top-right-radius: 15px;
+                }
+
+                &_description{
+                    @extend %flex_parameter;
+                    @include column_parameter;
+                    flex-wrap: wrap;
+                    height: 50px;
+                    padding: 10px;
+
+                    &_heart{
+                        @extend %flex_parameter;
+                        flex-grow: 1;
+                        height: 100%;
+                        align-items: center;
+                        justify-content: right;
+
+                        &_1 , &_2{
+                            font-size: 25px;
+                        }
+
+                        &_2{
+                            visibility: hidden;
+                        }
+                    }
+                }
+
+                &_badge{
+                    @include set_background_color($primary_badge_color);
+                    color: $secondary_badge_color;
+                    font-weight: bold;
+                    padding: 10px;
+                    position: absolute;
+                    top: 10px;
+                    right: 10px;
+                }
+            }
+        }
+    }
+}
+
+

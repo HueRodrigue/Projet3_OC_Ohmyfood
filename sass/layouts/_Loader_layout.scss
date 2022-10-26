@@ -1,0 +1,38 @@
+.loader {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background-color: $primary_color;
+    animation: loader 0.01s;
+    animation-delay: 1.75s;
+    animation-fill-mode: both;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .loader__item {
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    animation: jump 1s;
+    animation-iteration-count: 1;
+  }
+  .loader__itemContainer {
+    display: flex;
+    width: 100px;
+    justify-content: space-between;
+  }
+  .loader__item--1 {
+    background-color: $tertiary_color;
+  }
+  .loader__item--2 {
+    background-color: $primary_badge_color;
+    animation-delay: 0.25s;
+  }
+  .loader__item--3 {
+    background-color: #FF79DA;
+    animation-delay: 0.5s;
+  }

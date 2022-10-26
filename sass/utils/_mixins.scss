@@ -1,0 +1,39 @@
+@mixin btn_style {
+    background: linear-gradient(160deg, rgba(237,115,218),  rgba(161,91,220));
+    border: none;
+    border-radius: 30px;
+    padding: 15px;
+    margin-bottom: 40px;
+    color: white;
+}
+
+@mixin centering_content{
+    align-items: center;
+    justify-content: center;    
+}
+
+@mixin text_center {
+    text-align: center;
+}
+
+@mixin set_background_color($color) {
+    background-color: $color;
+}
+
+@mixin menu_section_params{
+    text-transform: uppercase;
+    padding-top: 10px;
+    position: relative;
+}
+
+@mixin box_shadow{
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+
+@mixin column_parameter{
+    flex-direction: column;
+}
+@mixin flex_parameter{
+    display: flex;
+}

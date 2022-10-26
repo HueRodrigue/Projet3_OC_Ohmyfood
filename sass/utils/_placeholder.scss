@@ -1,0 +1,30 @@
+/* Classe muette */
+%flex_parameter{
+    display: flex;
+}
+
+
+%menu_section_params{
+    text-transform: uppercase;
+    padding-top: 10px;
+    position: relative;
+}
+
+%menu_section_before_params{
+    content: "";
+    position: absolute;
+    width: 10%;
+    height: 1px;
+    bottom: 0;
+    border-bottom: 2px solid $primary_badge_color;
+}
+
+%box_shadow{
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+%menu_params{
+    width: 45%;
+    margin-left: auto;
+    margin-right: auto;
+}

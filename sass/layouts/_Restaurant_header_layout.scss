@@ -1,0 +1,13 @@
+.restaurant_header{
+    @extend %flex_parameter;
+    align-items: center;
+    h1{
+        margin: auto;
+    }
+    .header_return{
+        padding-left: 10px;
+        text-decoration: none;
+        color: black;
+    }
+}
+
