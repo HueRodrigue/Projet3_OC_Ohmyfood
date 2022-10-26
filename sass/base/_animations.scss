@@ -1,27 +1,30 @@
 /* Loader*/
 @keyframes loader {
+  /*Opacité du loader*/
     100% {
       opacity: 0;
       z-index: -10;
     }
 }
 
-  @keyframes jump {
-    0% {
-      transform: translateY(0);
-    }
-    25% {
-      transform: translateY(20px);
-    }
-    75% {
-      transform: translateY(-20px);
-    }
-    100% {
-      transform: translateY(0);
-    }
+@keyframes jump {
+  /*Animation du loader*/
+  0% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(20px);
+  }
+  75% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
 
 @keyframes slide{
+  /*Apparition du check*/
     from{width: 0px;}
     to{
         width:100px

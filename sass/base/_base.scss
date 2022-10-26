@@ -1,20 +1,26 @@
-
 *{
+    /* Paramètre de base (pas de marge) */
     padding: 0;
     margin: 0;
 }
 
 body{
+    /* Police principale du contenu */
     font-family: $text_police;
 }
+
 .Content_container{
+    /* Taille max du contenu ( version ordinateur ) */
     max-width: 1400px;
     margin: auto;
 }
 
 h1{
+    /* Police des titres */
     font-family:  $title_police;
 }
+
 h2{
+    /* Titre h2 en gras */
     font-weight: bold;
 }

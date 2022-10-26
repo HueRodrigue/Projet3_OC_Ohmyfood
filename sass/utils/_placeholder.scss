@@ -1,16 +1,19 @@
-/* Classe muette */
+
 %flex_parameter{
+    /* Classe muette permettant d'aligner le contenu */
     display: flex;
 }
 
 
 %menu_section_params{
+    /* Classe muette permettant de passer en majuscule les titres des menus */
     text-transform: uppercase;
     padding-top: 10px;
     position: relative;
 }
 
 %menu_section_before_params{
+    /* Classe muette permettant de souligner les titre des menus */
     content: "";
     position: absolute;
     width: 10%;
@@ -20,10 +23,12 @@
 }
 
 %box_shadow{
+    /* Classe muette permettant d'appliquer des ombres */
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
 %menu_params{
+    /* Classe muette permettant d'appliquer les parametres standards des menus */
     width: 45%;
     margin-left: auto;
     margin-right: auto;

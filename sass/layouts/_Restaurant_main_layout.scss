@@ -1,12 +1,12 @@
-/* Page Restaurant */
-/* Banniere*/
 .restaurant_main{
+    /* Page Restaurant */
     @include set_background_color($primary_color);
     margin-bottom: 40px;
     border-bottom-left-radius: 40px;
     border-bottom-right-radius: 40px;
 
     .main_banner{
+        /* Banniere*/
         width:100%;
         z-index: 1;
         
@@ -19,6 +19,7 @@
     }
 
     .menu_section{
+        /* Parametre de la partie menu */
         transform: translateY(-50px);
         z-index: 2;
         background-color: $basic_color;
@@ -30,6 +31,7 @@
         flex-wrap: wrap;
         
         .main_title{
+            /* Parametre du titre du restaurant */
             @extend %flex_parameter;
             font-family: $title_police;
             font-weight: bold;
@@ -38,6 +40,7 @@
             width: 100%;
 
             &_heart_1{
+                /* Parametre du coeur du restaurant */
                 font-size: 20px;
                 color: transparent;
                 -webkit-text-stroke: 1px darkslategray;
@@ -45,6 +48,7 @@
             }
 
             &_heart_1:hover{
+                /* Parametre de l'animation du coeur*/
                 background: linear-gradient(#FF79DA, #9356DC);
                 -webkit-text-fill-color: transparent;
                 -webkit-background-clip: text;
@@ -54,6 +58,7 @@
         }
 
         &_entry, &_dish, &_dessert{
+            /* Parametre des titres entrées plats desserts */
             @extend %menu_params;
             
             h3{
@@ -65,6 +70,7 @@
             }
 
             .item{
+                /* Parametre des cartes des plats */
                 @include box_shadow;
                 @include set_background_color($basic_color);
                 @extend %flex_parameter;
@@ -78,6 +84,7 @@
                 border-radius: 15px;
 
                 &_description{
+                    /* Parametre des descriptions des plats */
                     @extend %flex_parameter;
                     width: 100%;
                     justify-content: space-between;
@@ -101,12 +108,14 @@
                     }
 
                     &_price{
+                        /* Parametre du prix */
                         align-self: flex-end;
                         font-weight: bold;
                     }
                 }
 
                 &_validate{
+                    /* Parametre de la partie validation */
                     display: none;
                     background-color: #99E2D0;
                     color: #FFF;
@@ -120,6 +129,7 @@
             }
 
             .item:hover .item_validate {
+                /* Animation check */
                 display: flex;
                 align-items: center;
                 justify-content: center;
@@ -127,6 +137,7 @@
             }
 
             .item:hover .item_validate i{
+                /* Ration du check test */
                 transform: rotate(360);
                 transition: transform 2000ms ease;
             }
@@ -134,11 +145,13 @@
     }
 
     .main_submitbutton{
+        /* Parametre du boutton de validation de commande */
         @extend %flex_parameter;
         @include centering_content;
     }
 
     .btn{
+        /* Parametre boutton */
         @include box_shadow;
         @include btn_style;
     }

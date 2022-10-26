@@ -1,15 +1,24 @@
-/* Classe muette */
-.restaurant_main .main_submitbutton, .restaurant_main .menu_section_entry .item_description, .restaurant_main .menu_section_dish .item_description, .restaurant_main .menu_section_dessert .item_description, .restaurant_main .menu_section_entry .item, .restaurant_main .menu_section_dish .item, .restaurant_main .menu_section_dessert .item, .restaurant_main .menu_section .main_title, .restaurant_header, main .restaurants_section .restaurants_article_list .restaurants_list_item_description_heart, main .restaurants_section .restaurants_article_list .restaurants_list_item_description, main .restaurants_section .restaurants_article_list, main .explore_and_working_section .working_article_list_item_number, main .explore_and_working_section .working_article_list_item, main .explore_and_working_section .working_article_list, main .explore_and_working_section .working_article, main .explore_and_working_section .explore_article, main .explore_and_working_section, main .city_form, footer .footer_list {
+@charset "UTF-8";
+/* Style d'un boutton */
+/* Centrage d'un item*/
+/* Centrage du texte */
+/* Fonction permettant d'appliquer une couleur de fond */
+/* Fonction permettant d'afficher des ombres */
+/* Fonction pour mettre le contenu en colonne*/
+.restaurant_main .main_submitbutton, .restaurant_main .menu_section_entry .item_description, .restaurant_main .menu_section_dish .item_description, .restaurant_main .menu_section_dessert .item_description, .restaurant_main .menu_section_entry .item, .restaurant_main .menu_section_dish .item, .restaurant_main .menu_section_dessert .item, .restaurant_main .menu_section .main_title, .restaurant_header, footer .footer_list, main .restaurants_section .restaurants_article_list .restaurants_list_item_description_heart, main .restaurants_section .restaurants_article_list .restaurants_list_item_description, main .restaurants_section .restaurants_article_list, main .explore_and_working_section .working_article_list_item_number, main .explore_and_working_section .working_article_list_item, main .explore_and_working_section .working_article_list, main .explore_and_working_section .working_article, main .explore_and_working_section .explore_article, main .explore_and_working_section, main .city_form {
+  /* Classe muette permettant d'aligner le contenu */
   display: flex;
 }
 
 .restaurant_main .menu_section_entry h3, .restaurant_main .menu_section_dish h3, .restaurant_main .menu_section_dessert h3 {
+  /* Classe muette permettant de passer en majuscule les titres des menus */
   text-transform: uppercase;
   padding-top: 10px;
   position: relative;
 }
 
 .restaurant_main .menu_section_entry h3::before, .restaurant_main .menu_section_dish h3::before, .restaurant_main .menu_section_dessert h3::before {
+  /* Classe muette permettant de souligner les titre des menus */
   content: "";
   position: absolute;
   width: 10%;
@@ -19,44 +28,14 @@
 }
 
 .restaurant_main .menu_section_entry, .restaurant_main .menu_section_dish, .restaurant_main .menu_section_dessert {
+  /* Classe muette permettant d'appliquer les parametres standards des menus */
   width: 45%;
   margin-left: auto;
   margin-right: auto;
 }
 
-footer {
-  width: auto;
-  padding: 20px;
-  background-color: rgb(53, 53, 53);
-}
-footer h1 {
-  color: white;
-  font-size: large;
-  font-weight: normal;
-}
-footer .footer_list {
-  list-style: none;
-  padding-top: 10px;
-  justify-content: space-between;
-}
-footer .footer_list_item {
-  padding-top: 10px;
-}
-footer .footer_list_item_link {
-  text-decoration: none;
-  color: white;
-}
-footer .footer_list_item_icon {
-  width: 10px;
-  height: 10px;
-  padding-right: 15px;
-}
-
-header .header_title {
-  text-align: center;
-}
-
 .loader {
+  /* Layout du loader ( a refaire ) */
   position: fixed;
   height: 100%;
   width: 100%;
@@ -100,7 +79,15 @@ header .header_title {
   animation-delay: 0.5s;
 }
 
+header {
+  /* Layout du Header ( page principal ) */
+}
+header .header_title {
+  text-align: center;
+}
+
 main .city_form {
+  /* Parametre du formulaire de ville */
   background-color: #f2f2f2;
   align-items: center;
   justify-content: center;
@@ -123,9 +110,11 @@ main .city_form_input::placeholder {
   font-weight: bold;
 }
 main .explore_and_working_section {
+  /* Parametre de la section regroupant exploration et fonctionnement */
   flex-direction: column;
 }
 main .explore_and_working_section .explore_article {
+  /* Parametre de la partie exploration */
   align-items: center;
   justify-content: center;
   text-align: center;
@@ -140,6 +129,7 @@ main .explore_and_working_section .explore_article_title {
   padding-left: 20px;
 }
 main .explore_and_working_section .explore_article .btn {
+  /* Parametre du boutton */
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   background: linear-gradient(160deg, rgb(237, 115, 218), rgb(161, 91, 220));
   border: none;
@@ -152,6 +142,7 @@ main .explore_and_working_section .explore_article > * {
   margin: 10px;
 }
 main .explore_and_working_section .working_article {
+  /* Parametre de la partie fonctionnement */
   flex-direction: column;
   padding-top: 50px;
   padding-bottom: 50px;
@@ -160,7 +151,11 @@ main .explore_and_working_section .working_article {
 main .explore_and_working_section .working_article h3 {
   padding: 10px;
 }
+main .explore_and_working_section .working_article_list {
+  /* Parametre de la liste du fonctionnement */
+}
 main .explore_and_working_section .working_article_list_item {
+  /* Parametre des item de la liste fonctionnement */
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   background-color: #f2f2f2;
   margin-bottom: 15px;
@@ -171,6 +166,7 @@ main .explore_and_working_section .working_article_list_item {
   width: 30%;
 }
 main .explore_and_working_section .working_article_list_item_icon {
+  /* Parametre des icons de la liste fonctionnement */
   width: 20px;
   height: 20px;
   color: #bfbfbf;
@@ -181,9 +177,11 @@ main .explore_and_working_section .working_article_list_item_icon {
   padding-right: 30px;
 }
 main .explore_and_working_section .working_article_list_item_text {
+  /* Parametre du texte de la liste fonctionnement */
   font-weight: bold;
 }
 main .explore_and_working_section .working_article_list_item_number {
+  /* Parametre des numéros de la liste fonctionnement */
   background-color: rgb(147, 86, 220);
   align-items: center;
   justify-content: center;
@@ -195,12 +193,14 @@ main .explore_and_working_section .working_article_list_item_number {
   margin-left: -30px;
 }
 main .explore_and_working_section .working_article_list_item:last-child {
+  /* Parametre du dernier item de la liste fonctionnement */
   background-color: rgb(245, 237, 255);
 }
 main .explore_and_working_section .working_article_list_item:last-child .working_article_list_item_icon {
   color: rgb(147, 86, 220);
 }
 main .restaurants_section {
+  /* Parametre de la partie restaurant */
   background-color: #f2f2f2;
   padding-bottom: 50px;
   padding-top: 50px;
@@ -211,15 +211,18 @@ main .restaurants_section h3 {
   padding: 10px;
 }
 main .restaurants_section .restaurants_article_list {
+  /* Parametre de la liste d'article restaurant */
   flex-wrap: wrap;
   margin: auto;
 }
 main .restaurants_section .restaurants_article_list .restaurants_list_item {
+  /* Parametre des articles restaurants */
   text-decoration: none;
   color: black;
   width: 50%;
 }
 main .restaurants_section .restaurants_article_list .restaurants_list_item figure {
+  /* Parametre de l'image d'un restaurant */
   background-color: white;
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   border-radius: 15px;
@@ -235,12 +238,14 @@ main .restaurants_section .restaurants_article_list .restaurants_list_item_image
   border-top-right-radius: 15px;
 }
 main .restaurants_section .restaurants_article_list .restaurants_list_item_description {
+  /* Parametre de la description d'un restaurant */
   flex-direction: column;
   flex-wrap: wrap;
   height: 50px;
   padding: 10px;
 }
 main .restaurants_section .restaurants_article_list .restaurants_list_item_description_heart {
+  /* Parametre de l'icon coeur d'un restaurant */
   flex-grow: 1;
   height: 100%;
   align-items: center;
@@ -253,6 +258,7 @@ main .restaurants_section .restaurants_article_list .restaurants_list_item_descr
   visibility: hidden;
 }
 main .restaurants_section .restaurants_article_list .restaurants_list_item_badge {
+  /* Parametre du badge nouveau d'un restaurant */
   background-color: rgb(153, 226, 208);
   color: #278870;
   font-weight: bold;
@@ -262,7 +268,37 @@ main .restaurants_section .restaurants_article_list .restaurants_list_item_badge
   right: 10px;
 }
 
+footer {
+  /* Layout du footer */
+  width: auto;
+  padding: 20px;
+  background-color: rgb(53, 53, 53);
+}
+footer h1 {
+  color: white;
+  font-size: large;
+  font-weight: normal;
+}
+footer .footer_list {
+  list-style: none;
+  padding-top: 10px;
+  justify-content: space-between;
+}
+footer .footer_list_item {
+  padding-top: 10px;
+}
+footer .footer_list_item_link {
+  text-decoration: none;
+  color: white;
+}
+footer .footer_list_item_icon {
+  width: 10px;
+  height: 10px;
+  padding-right: 15px;
+}
+
 .restaurant_header {
+  /* Parametre du header des pages restaurant */
   align-items: center;
 }
 .restaurant_header h1 {
@@ -274,15 +310,15 @@ main .restaurants_section .restaurants_article_list .restaurants_list_item_badge
   color: black;
 }
 
-/* Page Restaurant */
-/* Banniere*/
 .restaurant_main {
+  /* Page Restaurant */
   background-color: #f2f2f2;
   margin-bottom: 40px;
   border-bottom-left-radius: 40px;
   border-bottom-right-radius: 40px;
 }
 .restaurant_main .main_banner {
+  /* Banniere*/
   width: 100%;
   z-index: 1;
 }
@@ -293,6 +329,7 @@ main .restaurants_section .restaurants_article_list .restaurants_list_item_badge
   box-shadow: inset 0px 11px 8px -10px rgba(0, 0, 0, 0.5);
 }
 .restaurant_main .menu_section {
+  /* Parametre de la partie menu */
   transform: translateY(-50px);
   z-index: 2;
   background-color: white;
@@ -304,6 +341,7 @@ main .restaurants_section .restaurants_article_list .restaurants_list_item_badge
   flex-wrap: wrap;
 }
 .restaurant_main .menu_section .main_title {
+  /* Parametre du titre du restaurant */
   font-family: "Shrikhand";
   font-weight: bold;
   align-items: center;
@@ -311,19 +349,25 @@ main .restaurants_section .restaurants_article_list .restaurants_list_item_badge
   width: 100%;
 }
 .restaurant_main .menu_section .main_title_heart_1 {
+  /* Parametre du coeur du restaurant */
   font-size: 20px;
   color: transparent;
   -webkit-text-stroke: 1px darkslategray;
   stroke-width: 50;
 }
 .restaurant_main .menu_section .main_title_heart_1:hover {
+  /* Parametre de l'animation du coeur*/
   background: linear-gradient(#FF79DA, #9356DC);
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
   -webkit-text-stroke: 1px transparent;
   transition: 200ms ease-in-out;
 }
+.restaurant_main .menu_section_entry, .restaurant_main .menu_section_dish, .restaurant_main .menu_section_dessert {
+  /* Parametre des titres entrées plats desserts */
+}
 .restaurant_main .menu_section_entry .item, .restaurant_main .menu_section_dish .item, .restaurant_main .menu_section_dessert .item {
+  /* Parametre des cartes des plats */
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   background-color: white;
   text-decoration: none;
@@ -336,6 +380,7 @@ main .restaurants_section .restaurants_article_list .restaurants_list_item_badge
   border-radius: 15px;
 }
 .restaurant_main .menu_section_entry .item_description, .restaurant_main .menu_section_dish .item_description, .restaurant_main .menu_section_dessert .item_description {
+  /* Parametre des descriptions des plats */
   width: 100%;
   justify-content: space-between;
   padding: 20px;
@@ -355,10 +400,12 @@ main .restaurants_section .restaurants_article_list .restaurants_list_item_badge
   text-overflow: ellipsis;
 }
 .restaurant_main .menu_section_entry .item_description_price, .restaurant_main .menu_section_dish .item_description_price, .restaurant_main .menu_section_dessert .item_description_price {
+  /* Parametre du prix */
   align-self: flex-end;
   font-weight: bold;
 }
 .restaurant_main .menu_section_entry .item_validate, .restaurant_main .menu_section_dish .item_validate, .restaurant_main .menu_section_dessert .item_validate {
+  /* Parametre de la partie validation */
   display: none;
   background-color: #99E2D0;
   color: #FFF;
@@ -369,20 +416,24 @@ main .restaurants_section .restaurants_article_list .restaurants_list_item_badge
   width: 0px;
 }
 .restaurant_main .menu_section_entry .item:hover .item_validate, .restaurant_main .menu_section_dish .item:hover .item_validate, .restaurant_main .menu_section_dessert .item:hover .item_validate {
+  /* Animation check */
   display: flex;
   align-items: center;
   justify-content: center;
   animation: slide 2s;
 }
 .restaurant_main .menu_section_entry .item:hover .item_validate i, .restaurant_main .menu_section_dish .item:hover .item_validate i, .restaurant_main .menu_section_dessert .item:hover .item_validate i {
+  /* Ration du check test */
   transform: rotate(360);
   transition: transform 2000ms ease;
 }
 .restaurant_main .main_submitbutton {
+  /* Parametre du boutton de validation de commande */
   align-items: center;
   justify-content: center;
 }
 .restaurant_main .btn {
+  /* Parametre boutton */
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   background: linear-gradient(160deg, rgb(237, 115, 218), rgb(161, 91, 220));
   border: none;
@@ -394,12 +445,14 @@ main .restaurants_section .restaurants_article_list .restaurants_list_item_badge
 
 /* Loader*/
 @keyframes loader {
+  /*Opacité du loader*/
   100% {
     opacity: 0;
     z-index: -10;
   }
 }
 @keyframes jump {
+  /*Animation du loader*/
   0% {
     transform: translateY(0);
   }
@@ -414,6 +467,7 @@ main .restaurants_section .restaurants_article_list .restaurants_list_item_badge
   }
 }
 @keyframes slide {
+  /*Apparition du check*/
   from {
     width: 0px;
   }
@@ -422,24 +476,29 @@ main .restaurants_section .restaurants_article_list .restaurants_list_item_badge
   }
 }
 * {
+  /* Paramètre de base (pas de marge) */
   padding: 0;
   margin: 0;
 }
 
 body {
+  /* Police principale du contenu */
   font-family: "Roboto";
 }
 
 .Content_container {
+  /* Taille max du contenu ( version ordinateur ) */
   max-width: 1400px;
   margin: auto;
 }
 
 h1 {
+  /* Police des titres */
   font-family: "Shrikhand";
 }
 
 h2 {
+  /* Titre h2 en gras */
   font-weight: bold;
 }
 

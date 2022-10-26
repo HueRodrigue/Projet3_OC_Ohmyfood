@@ -1,5 +1,6 @@
 main{
     .city_form{
+        /* Parametre du formulaire de ville */
         @extend %flex_parameter;
         @include set_background_color($primary_color);
         @include centering_content;
@@ -21,12 +22,12 @@ main{
             font-weight: bold;
         }
     }
-
     .explore_and_working_section{
+        /* Parametre de la section regroupant exploration et fonctionnement */
         @extend %flex_parameter;
         @include column_parameter;
-
         .explore_article{
+            /* Parametre de la partie exploration */
             @include centering_content;
             @include text_center;
             @extend %flex_parameter;
@@ -40,8 +41,8 @@ main{
                 padding-right: 20px;
                 padding-left: 20px;
             }
-
             .btn{
+                /* Parametre du boutton */
                 @include box_shadow;
                 @include btn_style;
             }
@@ -51,6 +52,7 @@ main{
             margin: 10px;
         }
         .working_article {
+            /* Parametre de la partie fonctionnement */
             @extend %flex_parameter;
             @include column_parameter;
             padding-top: 50px;
@@ -60,11 +62,11 @@ main{
             h3{
                 padding: 10px;
             }
-
             &_list{
+                /* Parametre de la liste du fonctionnement */
                 @extend %flex_parameter;
-
                 &_item{
+                    /* Parametre des item de la liste fonctionnement */
                     @include box_shadow;
                     @extend %flex_parameter;
                     @include set_background_color($primary_color);
@@ -74,8 +76,8 @@ main{
                     margin-right: 15px;
                     border-radius: 15px;
                     width: 30%;
-
                     &_icon{
+                        /* Parametre des icons de la liste fonctionnement */
                         width: 20px;
                         height: 20px;
                         color: $secondary_color;
@@ -84,12 +86,12 @@ main{
                         padding-left: 15px;
                         padding-right: 30px;
                     }
-
                     &_text{
+                        /* Parametre du texte de la liste fonctionnement */
                         font-weight: bold;
                     }
-
                     &_number{
+                        /* Parametre des numéros de la liste fonctionnement */
                         @include set_background_color($tertiary_color);
                         @extend %flex_parameter;
                         @include centering_content;
@@ -102,6 +104,7 @@ main{
                     }
                 }
                 &_item:last-child{
+                    /* Parametre du dernier item de la liste fonctionnement */
                     background-color: rgb(245, 237, 255);
 
                     .working_article_list_item_icon{
@@ -114,6 +117,7 @@ main{
     }  
 
     .restaurants_section{
+        /* Parametre de la partie restaurant */
         @include set_background_color($primary_color);
         padding-bottom: 50px;
         padding-top: 50px;
@@ -123,18 +127,19 @@ main{
         h3{
             padding: 10px;
         }
-
         .restaurants_article_list{
+            /* Parametre de la liste d'article restaurant */
             @extend %flex_parameter;
             flex-wrap: wrap;
             margin: auto;
-
             .restaurants_list_item{
+                /* Parametre des articles restaurants */
                 text-decoration: none;
                 color: black;
                 width: 50%;
 
                 figure{
+                    /* Parametre de l'image d'un restaurant */
                     @include set_background_color($basic_color);
                     @include box_shadow;
                     border-radius: 15px;
@@ -152,6 +157,7 @@ main{
                 }
 
                 &_description{
+                    /* Parametre de la description d'un restaurant */
                     @extend %flex_parameter;
                     @include column_parameter;
                     flex-wrap: wrap;
@@ -159,6 +165,7 @@ main{
                     padding: 10px;
 
                     &_heart{
+                        /* Parametre de l'icon coeur d'un restaurant */
                         @extend %flex_parameter;
                         flex-grow: 1;
                         height: 100%;
@@ -176,6 +183,7 @@ main{
                 }
 
                 &_badge{
+                    /* Parametre du badge nouveau d'un restaurant */
                     @include set_background_color($primary_badge_color);
                     color: $secondary_badge_color;
                     font-weight: bold;
