@@ -11,15 +11,20 @@ main{
         width: 200px;
         height: 50px;
         margin: auto;
+        &--marker{
+            color: $fifth_color;
+        }
         &_input{
             outline: none;
             border: none;
-            padding-left: 10px;
+            padding-top: 5px;
+            padding-left: 12px;
             @include set_background_color($primary_color);
         }
         &_input::placeholder{
-            color: black;
-            font-weight: bold;
+            color: $fifth_color;
+            font-weight: bolder;
+            font-size: 17px;
         }
     }
     .explore_and_working_section{
@@ -33,11 +38,20 @@ main{
             @extend %flex_parameter;
             @include column_parameter;
             padding: 25px;
+            padding-top: 40px;
             margin: 1%;
             border-radius: 15px;
             @include set_background_color(rgb(245, 237, 255));
-    
+            
+            p{
+                color: $fifth_color;
+                font-size: 23px;
+                padding-bottom: 25px;
+            }
+
             &_title{
+                font-weight: bold;
+                font-size: 35px;
                 padding-right: 20px;
                 padding-left: 20px;
             }
@@ -45,6 +59,7 @@ main{
                 /* Parametre du boutton */
                 @include box_shadow;
                 @include btn_style;
+                
             }
         }
     
@@ -61,6 +76,9 @@ main{
 
             h3{
                 padding: 10px;
+                font-size: 30px;
+                padding-bottom: 30px;
+                padding-left: 20px;
             }
             &_list{
                 /* Parametre de la liste du fonctionnement */
@@ -69,26 +87,33 @@ main{
                     /* Parametre des item de la liste fonctionnement */
                     @include box_shadow;
                     @extend %flex_parameter;
+                    align-items: center;
                     @include set_background_color($primary_color);
                     margin-bottom: 15px;
-                    padding: 20px;
+                    padding: 25px;
                     margin-left: 15px;
                     margin-right: 15px;
-                    border-radius: 15px;
-                    width: 30%;
+                    border-radius: 20px;
+                    width: 28%;
+                    &_description{
+                        @extend %flex_parameter;
+                        align-items: center;
+                    }
                     &_icon{
                         /* Parametre des icons de la liste fonctionnement */
-                        width: 20px;
-                        height: 20px;
-                        color: $secondary_color;
+                        width: 40px;
+                        height: 40px;
+                        font-size: 25px;
+                        color: $quaternary_color;
+                        @extend %flex_parameter;
                         @include centering_content;
-                        text-align: center;
                         padding-left: 15px;
                         padding-right: 30px;
                     }
                     &_text{
                         /* Parametre du texte de la liste fonctionnement */
                         font-weight: bold;
+                        font-size: 20px;
                     }
                     &_number{
                         /* Parametre des numéros de la liste fonctionnement */
@@ -97,10 +122,11 @@ main{
                         @include centering_content;
                         @include set_background_color($tertiary_color);
                         border-radius: 50%;
-                        width: 20px;
-                        height: 20px;
+                        width: 30px;
+                        height: 30px;
+                        font-size: 15px;
                         color: $basic_color;
-                        margin-left: -30px;
+                        margin-left: -40px;
                     }
                 }
                 &_item:last-child{
@@ -125,7 +151,9 @@ main{
         margin: 1%;
 
         h3{
+            font-size: 30px;
             padding: 10px;
+            padding-bottom: 20px;
         }
         .restaurants_article_list{
             /* Parametre de la liste d'article restaurant */
@@ -150,7 +178,7 @@ main{
 
                 &_image{
                     width: 100%;
-                    height:200px;
+                    height:220px;
                     object-fit: cover;
                     border-top-left-radius: 15px;
                     border-top-right-radius: 15px;
@@ -161,8 +189,18 @@ main{
                     @extend %flex_parameter;
                     @include column_parameter;
                     flex-wrap: wrap;
-                    height: 50px;
-                    padding: 10px;
+                    height: 70px;
+                    padding: 15px;
+
+                    h4{
+                        font-weight:900;
+                        font-size: 25px;
+                        padding-bottom: 5px;
+                    }
+                    span{
+                        font-size: 25px;
+                        color: $fifth_color;
+                    }
 
                     &_heart{
                         /* Parametre de l'icon coeur d'un restaurant */
@@ -172,12 +210,21 @@ main{
                         align-items: center;
                         justify-content: right;
 
-                        &_1 , &_2{
-                            font-size: 25px;
+                        &_1{
+                            /* Parametre du coeur du restaurant */
+                            font-size: 30px;
+                            color: transparent;
+                            -webkit-text-stroke: 1px darkslategray;
+                            stroke-width: 50;
                         }
-
-                        &_2{
-                            visibility: hidden;
+            
+                        &_1:hover{
+                            /* Parametre de l'animation du coeur*/
+                            background: linear-gradient(#FF79DA, #9356DC);
+                            -webkit-text-fill-color: transparent;
+                            -webkit-background-clip: text;
+                            -webkit-text-stroke: 1px transparent;
+                            transition: 200ms ease-in-out;
                         }
                     }
                 }

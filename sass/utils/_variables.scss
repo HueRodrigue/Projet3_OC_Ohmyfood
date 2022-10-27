@@ -1,5 +1,7 @@
 $primary_color : #f2f2f2;
-$secondary_color: darken($primary_color, 20%);
+$secondary_color: darken($primary_color, 10%);
+$quaternary_color : darken($primary_color, 50%);
+$fifth_color : darken($primary_color, 75%);
 $basic_color: white;
 $tertiary_color: rgb(147, 86, 220);
 $primary_badge_color : rgb(153, 226, 208);

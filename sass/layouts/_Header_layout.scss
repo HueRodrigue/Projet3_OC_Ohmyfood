@@ -1,6 +1,9 @@
 header{
     /* Layout du Header ( page principal ) */
     .header_title{
-    @include text_center
+        @include text_center;
+        font-size : 40px;
+        padding-bottom:10px ;
+        padding-top: 15px;
     }
 }

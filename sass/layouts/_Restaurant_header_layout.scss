@@ -3,9 +3,15 @@
     @extend %flex_parameter;
     align-items: center;
     h1{
+        font-size : 40px;
+        padding-bottom:10px ;
+        padding-top: 15px;
         margin: auto;
     }
     .header_return{
+        font-size : 40px;
+        padding-bottom:10px ;
+        padding-top: 15px;
         padding-left: 10px;
         text-decoration: none;
         color: black;

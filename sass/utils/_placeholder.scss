@@ -8,8 +8,11 @@
 %menu_section_params{
     /* Classe muette permettant de passer en majuscule les titres des menus */
     text-transform: uppercase;
-    padding-top: 10px;
+    font-size: 25px;
+    padding-top: 50px;
     position: relative;
+    color: $fifth_color;
+    padding-bottom: 12px;
 }
 
 %menu_section_before_params{
@@ -19,7 +22,7 @@
     width: 10%;
     height: 1px;
     bottom: 0;
-    border-bottom: 2px solid $primary_badge_color;
+    border-bottom: 5px solid $primary_badge_color;
 }
 
 %box_shadow{

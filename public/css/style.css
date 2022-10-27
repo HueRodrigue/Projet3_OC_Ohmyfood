@@ -5,7 +5,7 @@
 /* Fonction permettant d'appliquer une couleur de fond */
 /* Fonction permettant d'afficher des ombres */
 /* Fonction pour mettre le contenu en colonne*/
-.restaurant_main .main_submitbutton, .restaurant_main .menu_section_entry .item_description, .restaurant_main .menu_section_dish .item_description, .restaurant_main .menu_section_dessert .item_description, .restaurant_main .menu_section_entry .item, .restaurant_main .menu_section_dish .item, .restaurant_main .menu_section_dessert .item, .restaurant_main .menu_section .main_title, .restaurant_header, footer .footer_list, main .restaurants_section .restaurants_article_list .restaurants_list_item_description_heart, main .restaurants_section .restaurants_article_list .restaurants_list_item_description, main .restaurants_section .restaurants_article_list, main .explore_and_working_section .working_article_list_item_number, main .explore_and_working_section .working_article_list_item, main .explore_and_working_section .working_article_list, main .explore_and_working_section .working_article, main .explore_and_working_section .explore_article, main .explore_and_working_section, main .city_form {
+.restaurant_main .main_submitbutton, .restaurant_main .menu_section_entry .item_description, .restaurant_main .menu_section_dish .item_description, .restaurant_main .menu_section_dessert .item_description, .restaurant_main .menu_section_entry .item, .restaurant_main .menu_section_dish .item, .restaurant_main .menu_section_dessert .item, .restaurant_main .menu_section .main_title, .restaurant_header, footer .footer_list, main .restaurants_section .restaurants_article_list .restaurants_list_item_description_heart, main .restaurants_section .restaurants_article_list .restaurants_list_item_description, main .restaurants_section .restaurants_article_list, main .explore_and_working_section .working_article_list_item_number, main .explore_and_working_section .working_article_list_item_icon, main .explore_and_working_section .working_article_list_item_description, main .explore_and_working_section .working_article_list_item, main .explore_and_working_section .working_article_list, main .explore_and_working_section .working_article, main .explore_and_working_section .explore_article, main .explore_and_working_section, main .city_form {
   /* Classe muette permettant d'aligner le contenu */
   display: flex;
 }
@@ -13,8 +13,11 @@
 .restaurant_main .menu_section_entry h3, .restaurant_main .menu_section_dish h3, .restaurant_main .menu_section_dessert h3 {
   /* Classe muette permettant de passer en majuscule les titres des menus */
   text-transform: uppercase;
-  padding-top: 10px;
+  font-size: 25px;
+  padding-top: 50px;
   position: relative;
+  color: #333333;
+  padding-bottom: 12px;
 }
 
 .restaurant_main .menu_section_entry h3::before, .restaurant_main .menu_section_dish h3::before, .restaurant_main .menu_section_dessert h3::before {
@@ -24,7 +27,7 @@
   width: 10%;
   height: 1px;
   bottom: 0;
-  border-bottom: 2px solid rgb(153, 226, 208);
+  border-bottom: 5px solid rgb(153, 226, 208);
 }
 
 .restaurant_main .menu_section_entry, .restaurant_main .menu_section_dish, .restaurant_main .menu_section_dessert {
@@ -84,6 +87,9 @@ header {
 }
 header .header_title {
   text-align: center;
+  font-size: 40px;
+  padding-bottom: 10px;
+  padding-top: 15px;
 }
 
 main .city_form {
@@ -99,15 +105,20 @@ main .city_form {
   height: 50px;
   margin: auto;
 }
+main .city_form--marker {
+  color: #333333;
+}
 main .city_form_input {
   outline: none;
   border: none;
-  padding-left: 10px;
+  padding-top: 5px;
+  padding-left: 12px;
   background-color: #f2f2f2;
 }
 main .city_form_input::placeholder {
-  color: black;
-  font-weight: bold;
+  color: #333333;
+  font-weight: bolder;
+  font-size: 17px;
 }
 main .explore_and_working_section {
   /* Parametre de la section regroupant exploration et fonctionnement */
@@ -120,11 +131,19 @@ main .explore_and_working_section .explore_article {
   text-align: center;
   flex-direction: column;
   padding: 25px;
+  padding-top: 40px;
   margin: 1%;
   border-radius: 15px;
   background-color: rgb(245, 237, 255);
 }
+main .explore_and_working_section .explore_article p {
+  color: #333333;
+  font-size: 23px;
+  padding-bottom: 25px;
+}
 main .explore_and_working_section .explore_article_title {
+  font-weight: bold;
+  font-size: 35px;
   padding-right: 20px;
   padding-left: 20px;
 }
@@ -134,9 +153,12 @@ main .explore_and_working_section .explore_article .btn {
   background: linear-gradient(160deg, rgb(237, 115, 218), rgb(161, 91, 220));
   border: none;
   border-radius: 30px;
-  padding: 15px;
-  margin-bottom: 40px;
+  padding: 20px;
+  padding-right: 30px;
+  padding-left: 30px;
+  margin-bottom: 50px;
   color: white;
+  font-size: 18px;
 }
 main .explore_and_working_section .explore_article > * {
   margin: 10px;
@@ -150,6 +172,9 @@ main .explore_and_working_section .working_article {
 }
 main .explore_and_working_section .working_article h3 {
   padding: 10px;
+  font-size: 30px;
+  padding-bottom: 30px;
+  padding-left: 20px;
 }
 main .explore_and_working_section .working_article_list {
   /* Parametre de la liste du fonctionnement */
@@ -157,28 +182,33 @@ main .explore_and_working_section .working_article_list {
 main .explore_and_working_section .working_article_list_item {
   /* Parametre des item de la liste fonctionnement */
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  align-items: center;
   background-color: #f2f2f2;
   margin-bottom: 15px;
-  padding: 20px;
+  padding: 25px;
   margin-left: 15px;
   margin-right: 15px;
-  border-radius: 15px;
-  width: 30%;
+  border-radius: 20px;
+  width: 28%;
+}
+main .explore_and_working_section .working_article_list_item_description {
+  align-items: center;
 }
 main .explore_and_working_section .working_article_list_item_icon {
   /* Parametre des icons de la liste fonctionnement */
-  width: 20px;
-  height: 20px;
-  color: #bfbfbf;
+  width: 40px;
+  height: 40px;
+  font-size: 25px;
+  color: #737373;
   align-items: center;
   justify-content: center;
-  text-align: center;
   padding-left: 15px;
   padding-right: 30px;
 }
 main .explore_and_working_section .working_article_list_item_text {
   /* Parametre du texte de la liste fonctionnement */
   font-weight: bold;
+  font-size: 20px;
 }
 main .explore_and_working_section .working_article_list_item_number {
   /* Parametre des numéros de la liste fonctionnement */
@@ -187,10 +217,11 @@ main .explore_and_working_section .working_article_list_item_number {
   justify-content: center;
   background-color: rgb(147, 86, 220);
   border-radius: 50%;
-  width: 20px;
-  height: 20px;
+  width: 30px;
+  height: 30px;
+  font-size: 15px;
   color: white;
-  margin-left: -30px;
+  margin-left: -40px;
 }
 main .explore_and_working_section .working_article_list_item:last-child {
   /* Parametre du dernier item de la liste fonctionnement */
@@ -208,7 +239,9 @@ main .restaurants_section {
   margin: 1%;
 }
 main .restaurants_section h3 {
+  font-size: 30px;
   padding: 10px;
+  padding-bottom: 20px;
 }
 main .restaurants_section .restaurants_article_list {
   /* Parametre de la liste d'article restaurant */
@@ -232,7 +265,7 @@ main .restaurants_section .restaurants_article_list .restaurants_list_item figur
 }
 main .restaurants_section .restaurants_article_list .restaurants_list_item_image {
   width: 100%;
-  height: 200px;
+  height: 220px;
   object-fit: cover;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
@@ -241,8 +274,17 @@ main .restaurants_section .restaurants_article_list .restaurants_list_item_descr
   /* Parametre de la description d'un restaurant */
   flex-direction: column;
   flex-wrap: wrap;
-  height: 50px;
-  padding: 10px;
+  height: 70px;
+  padding: 15px;
+}
+main .restaurants_section .restaurants_article_list .restaurants_list_item_description h4 {
+  font-weight: 900;
+  font-size: 25px;
+  padding-bottom: 5px;
+}
+main .restaurants_section .restaurants_article_list .restaurants_list_item_description span {
+  font-size: 25px;
+  color: #333333;
 }
 main .restaurants_section .restaurants_article_list .restaurants_list_item_description_heart {
   /* Parametre de l'icon coeur d'un restaurant */
@@ -251,11 +293,20 @@ main .restaurants_section .restaurants_article_list .restaurants_list_item_descr
   align-items: center;
   justify-content: right;
 }
-main .restaurants_section .restaurants_article_list .restaurants_list_item_description_heart_1, main .restaurants_section .restaurants_article_list .restaurants_list_item_description_heart_2 {
-  font-size: 25px;
+main .restaurants_section .restaurants_article_list .restaurants_list_item_description_heart_1 {
+  /* Parametre du coeur du restaurant */
+  font-size: 30px;
+  color: transparent;
+  -webkit-text-stroke: 1px darkslategray;
+  stroke-width: 50;
 }
-main .restaurants_section .restaurants_article_list .restaurants_list_item_description_heart_2 {
-  visibility: hidden;
+main .restaurants_section .restaurants_article_list .restaurants_list_item_description_heart_1:hover {
+  /* Parametre de l'animation du coeur*/
+  background: linear-gradient(#FF79DA, #9356DC);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-stroke: 1px transparent;
+  transition: 200ms ease-in-out;
 }
 main .restaurants_section .restaurants_article_list .restaurants_list_item_badge {
   /* Parametre du badge nouveau d'un restaurant */
@@ -276,8 +327,8 @@ footer {
 }
 footer h1 {
   color: white;
-  font-size: large;
   font-weight: normal;
+  font-size: 20px;
 }
 footer .footer_list {
   list-style: none;
@@ -288,12 +339,13 @@ footer .footer_list_item {
   padding-top: 10px;
 }
 footer .footer_list_item_link {
+  font-size: 20px;
   text-decoration: none;
   color: white;
 }
 footer .footer_list_item_icon {
-  width: 10px;
-  height: 10px;
+  width: 20px;
+  height: 20px;
   padding-right: 15px;
 }
 
@@ -302,9 +354,15 @@ footer .footer_list_item_icon {
   align-items: center;
 }
 .restaurant_header h1 {
+  font-size: 40px;
+  padding-bottom: 10px;
+  padding-top: 15px;
   margin: auto;
 }
 .restaurant_header .header_return {
+  font-size: 40px;
+  padding-bottom: 10px;
+  padding-top: 15px;
   padding-left: 10px;
   text-decoration: none;
   color: black;
@@ -345,12 +403,14 @@ footer .footer_list_item_icon {
   font-family: "Shrikhand";
   font-weight: bold;
   align-items: center;
+  padding-top: 20px;
+  font-size: 30px;
   justify-content: space-between;
   width: 100%;
 }
 .restaurant_main .menu_section .main_title_heart_1 {
   /* Parametre du coeur du restaurant */
-  font-size: 20px;
+  font-size: 30px;
   color: transparent;
   -webkit-text-stroke: 1px darkslategray;
   stroke-width: 50;
@@ -376,7 +436,7 @@ footer .footer_list_item_icon {
   margin-bottom: 20px;
   align-items: center;
   width: 100%;
-  height: 70px;
+  height: 110px;
   border-radius: 15px;
 }
 .restaurant_main .menu_section_entry .item_description, .restaurant_main .menu_section_dish .item_description, .restaurant_main .menu_section_dessert .item_description {
@@ -390,11 +450,13 @@ footer .footer_list_item_icon {
   min-width: 0px;
 }
 .restaurant_main .menu_section_entry .item_description_text h4, .restaurant_main .menu_section_dish .item_description_text h4, .restaurant_main .menu_section_dessert .item_description_text h4 {
+  font-size: 25px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 .restaurant_main .menu_section_entry .item_description_text p, .restaurant_main .menu_section_dish .item_description_text p, .restaurant_main .menu_section_dessert .item_description_text p {
+  font-size: 25px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -403,6 +465,7 @@ footer .footer_list_item_icon {
   /* Parametre du prix */
   align-self: flex-end;
   font-weight: bold;
+  font-size: 25px;
 }
 .restaurant_main .menu_section_entry .item_validate, .restaurant_main .menu_section_dish .item_validate, .restaurant_main .menu_section_dessert .item_validate {
   /* Parametre de la partie validation */
@@ -438,9 +501,14 @@ footer .footer_list_item_icon {
   background: linear-gradient(160deg, rgb(237, 115, 218), rgb(161, 91, 220));
   border: none;
   border-radius: 30px;
-  padding: 15px;
-  margin-bottom: 40px;
+  padding: 20px;
+  padding-right: 30px;
+  padding-left: 30px;
+  margin-bottom: 50px;
   color: white;
+  font-size: 18px;
+  padding-left: 50px;
+  padding-right: 50px;
 }
 
 /* Loader*/
@@ -525,7 +593,7 @@ h2 {
     max-width: 768px;
   }
   main .city_form {
-    background-color: #bfbfbf;
+    background-color: #d9d9d9;
     align-items: center;
     justify-content: center;
     box-shadow: inset 0px 11px 8px -10px rgba(0, 0, 0, 0.5);
@@ -534,7 +602,7 @@ h2 {
     padding-left: 20px;
   }
   main .city_form_input {
-    background-color: #bfbfbf;
+    background-color: #d9d9d9;
     outline: none;
     border: none;
     padding-left: 10px;
@@ -552,18 +620,24 @@ h2 {
     flex-direction: column;
   }
   main .explore_and_working_section .working_article_list_item {
+    margin-left: 40px;
+    margin-right: 40px;
     width: auto;
   }
   main .restaurants_section {
     border-radius: 0px;
     margin: 0px;
   }
+  main .restaurants_section h3 {
+    padding-left: 20px;
+  }
   main .restaurants_section .restaurants_article_list {
     flex-direction: column;
     width: auto;
   }
   main .restaurants_section .restaurants_article_list .restaurants_list_item {
-    width: 100%;
+    margin: auto;
+    width: 94%;
   }
   .restaurant_main {
     background-color: #f2f2f2;

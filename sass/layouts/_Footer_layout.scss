@@ -5,8 +5,9 @@ footer{
     background-color: rgb(53, 53, 53);
     h1{
         color: $basic_color;
-        font-size: large;
+        
         font-weight: normal;
+        font-size: 20px;
     }
 
     .footer_list{
@@ -14,18 +15,20 @@ footer{
         padding-top: 10px;
         @extend %flex_parameter;
         justify-content: space-between;
+        
 
         &_item{
             padding-top: 10px;
 
             &_link{
+                font-size: 20px;
                 text-decoration: none;
                 color: white;
             }
 
             &_icon{
-                width: 10px;
-                height: 10px;
+                width: 20px;
+                height: 20px;
                 padding-right: 15px;
             }
         }

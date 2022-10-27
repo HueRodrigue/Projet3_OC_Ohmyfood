@@ -80,6 +80,8 @@
             .working_article {
                 &_list{
                     &_item{
+                        margin-left: 40px;
+                        margin-right: 40px;
                         width: auto;
                     }
                 }
@@ -89,11 +91,15 @@
         .restaurants_section{
             border-radius: 0px ;
             margin : 0px;
+            h3{
+                padding-left: 20px;
+            }
             .restaurants_article_list{
                 @include column_parameter;
                 width: auto;
                 .restaurants_list_item{
-                    width: 100%;
+                    margin: auto;
+                    width: 94%;
                 }  
             }
         }
