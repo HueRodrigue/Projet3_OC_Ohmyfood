@@ -147,6 +147,47 @@
             }
 
             
+            .item{
+                &_1 {
+                    animation: menu-apparition 2s;
+                }
+            
+                &_2 {
+                    animation: menu-apparition 2.5s;
+                }
+            
+                &_3 {
+                    animation: menu-apparition 3s;
+                }
+            
+                &_4 {
+                    animation: menu-apparition 3.5s;
+                }
+            
+                &_5 {
+                    animation: menu-apparition 4s;
+                }
+            
+                &_6 {
+                    animation: menu-apparition 4.5s;
+                }
+            
+                &_7 {
+                    animation: menu-apparition 5s;
+                }
+            
+                &_8 {
+                    animation: menu-apparition 5.5s;
+                }
+            
+                &_9 {
+                    animation: menu-apparition 6s;
+                }
+
+                &_10 {
+                    animation: menu-apparition 6.5s;
+                }
+            }
         }
     }
 

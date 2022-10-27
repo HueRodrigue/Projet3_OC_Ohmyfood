@@ -481,6 +481,36 @@ footer .footer_list_item_icon {
 .restaurant_main .menu_section_entry .item:hover .item_validate i, .restaurant_main .menu_section_dish .item:hover .item_validate i, .restaurant_main .menu_section_dessert .item:hover .item_validate i {
   animation: spin 2s;
 }
+.restaurant_main .menu_section_entry .item_1, .restaurant_main .menu_section_dish .item_1, .restaurant_main .menu_section_dessert .item_1 {
+  animation: menu-apparition 2s;
+}
+.restaurant_main .menu_section_entry .item_2, .restaurant_main .menu_section_dish .item_2, .restaurant_main .menu_section_dessert .item_2 {
+  animation: menu-apparition 2.5s;
+}
+.restaurant_main .menu_section_entry .item_3, .restaurant_main .menu_section_dish .item_3, .restaurant_main .menu_section_dessert .item_3 {
+  animation: menu-apparition 3s;
+}
+.restaurant_main .menu_section_entry .item_4, .restaurant_main .menu_section_dish .item_4, .restaurant_main .menu_section_dessert .item_4 {
+  animation: menu-apparition 3.5s;
+}
+.restaurant_main .menu_section_entry .item_5, .restaurant_main .menu_section_dish .item_5, .restaurant_main .menu_section_dessert .item_5 {
+  animation: menu-apparition 4s;
+}
+.restaurant_main .menu_section_entry .item_6, .restaurant_main .menu_section_dish .item_6, .restaurant_main .menu_section_dessert .item_6 {
+  animation: menu-apparition 4.5s;
+}
+.restaurant_main .menu_section_entry .item_7, .restaurant_main .menu_section_dish .item_7, .restaurant_main .menu_section_dessert .item_7 {
+  animation: menu-apparition 5s;
+}
+.restaurant_main .menu_section_entry .item_8, .restaurant_main .menu_section_dish .item_8, .restaurant_main .menu_section_dessert .item_8 {
+  animation: menu-apparition 5.5s;
+}
+.restaurant_main .menu_section_entry .item_9, .restaurant_main .menu_section_dish .item_9, .restaurant_main .menu_section_dessert .item_9 {
+  animation: menu-apparition 6s;
+}
+.restaurant_main .menu_section_entry .item_10, .restaurant_main .menu_section_dish .item_10, .restaurant_main .menu_section_dessert .item_10 {
+  animation: menu-apparition 6.5s;
+}
 .restaurant_main .main_submitbutton {
   /* Parametre du boutton de validation de commande */
   align-items: center;
@@ -552,6 +582,14 @@ footer .footer_list_item_icon {
   }
   100% {
     transform: rotate(360deg);
+  }
+}
+@keyframes menu-apparition {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
   }
 }
 * {
