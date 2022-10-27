@@ -25,8 +25,26 @@
 
 @keyframes slide{
   /*Apparition du check*/
-    from{width: 0px;}
+    from{width: 0px;
+      }
     to{
-        width:100px
+        width:150px;
+        transform: rotate(360);
     }
+}
+
+
+@keyframes shadow-hover{
+    from {
+      box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    }
+    to {
+      box-shadow: 0px 10px 13px -7px #000000, -2px 17px 50px -4px rgba(0,0,0,0.5);
+      
+    }
+}
+
+@keyframes spin { 
+  0%{transform: rotate(0deg);}
+  100%{transform: rotate(360deg);}
 }

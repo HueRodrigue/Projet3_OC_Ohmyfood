@@ -61,6 +61,9 @@ main{
                 @include btn_style;
                 
             }
+            .btn:hover{
+                animation : shadow-hover 500ms forwards;
+            }
         }
     
         .explore_article > * {
@@ -228,7 +231,6 @@ main{
                         }
                     }
                 }
-
                 &_badge{
                     /* Parametre du badge nouveau d'un restaurant */
                     @include set_background_color($primary_badge_color);
@@ -239,6 +241,10 @@ main{
                     top: 10px;
                     right: 10px;
                 }
+            }
+
+            .restaurants_list_item figure:hover{
+                animation: shadow-hover  500ms forwards;
             }
         }
     }

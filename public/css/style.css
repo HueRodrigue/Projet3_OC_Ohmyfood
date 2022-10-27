@@ -160,6 +160,9 @@ main .explore_and_working_section .explore_article .btn {
   color: white;
   font-size: 18px;
 }
+main .explore_and_working_section .explore_article .btn:hover {
+  animation: shadow-hover 500ms forwards;
+}
 main .explore_and_working_section .explore_article > * {
   margin: 10px;
 }
@@ -318,6 +321,9 @@ main .restaurants_section .restaurants_article_list .restaurants_list_item_badge
   top: 10px;
   right: 10px;
 }
+main .restaurants_section .restaurants_article_list .restaurants_list_item figure:hover {
+  animation: shadow-hover 500ms forwards;
+}
 
 footer {
   /* Layout du footer */
@@ -342,6 +348,9 @@ footer .footer_list_item_link {
   font-size: 20px;
   text-decoration: none;
   color: white;
+}
+footer .footer_list_item_link:hover {
+  color: rgb(147, 86, 220);
 }
 footer .footer_list_item_icon {
   width: 20px;
@@ -472,7 +481,7 @@ footer .footer_list_item_icon {
   display: none;
   background-color: #99E2D0;
   color: #FFF;
-  font-size: 20px;
+  font-size: 30px;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
   height: 100%;
@@ -483,12 +492,10 @@ footer .footer_list_item_icon {
   display: flex;
   align-items: center;
   justify-content: center;
-  animation: slide 2s;
+  animation: slide 2s forwards;
 }
 .restaurant_main .menu_section_entry .item:hover .item_validate i, .restaurant_main .menu_section_dish .item:hover .item_validate i, .restaurant_main .menu_section_dessert .item:hover .item_validate i {
-  /* Ration du check test */
-  transform: rotate(360);
-  transition: transform 2000ms ease;
+  animation: spin 2s;
 }
 .restaurant_main .main_submitbutton {
   /* Parametre du boutton de validation de commande */
@@ -509,6 +516,9 @@ footer .footer_list_item_icon {
   font-size: 18px;
   padding-left: 50px;
   padding-right: 50px;
+}
+.restaurant_main .btn:hover {
+  animation: shadow-hover 500ms forwards;
 }
 
 /* Loader*/
@@ -540,7 +550,24 @@ footer .footer_list_item_icon {
     width: 0px;
   }
   to {
-    width: 100px;
+    width: 150px;
+    transform: rotate(360);
+  }
+}
+@keyframes shadow-hover {
+  from {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+  to {
+    box-shadow: 0px 10px 13px -7px #000000, -2px 17px 50px -4px rgba(0, 0, 0, 0.5);
+  }
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
   }
 }
 * {

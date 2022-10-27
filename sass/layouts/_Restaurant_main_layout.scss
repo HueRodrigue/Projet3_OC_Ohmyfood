@@ -124,7 +124,7 @@
                     display: none;
                     background-color: #99E2D0;
                     color: #FFF;
-                    font-size: 20px;
+                    font-size: 30px;
                     border-top-right-radius: 15px;
                     border-bottom-right-radius: 15px;
                     height: 100%;
@@ -138,14 +138,15 @@
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                animation: slide 2s;
+                animation: slide 2s forwards;
+                
             }
 
             .item:hover .item_validate i{
-                /* Ration du check test */
-                transform: rotate(360);
-                transition: transform 2000ms ease;
+                animation: spin 2s;
             }
+
+            
         }
     }
 
@@ -161,6 +162,10 @@
         @include btn_style;
         padding-left: 50px;
         padding-right: 50px;
+    }
+
+    .btn:hover{
+        animation : shadow-hover 500ms forwards;
     }
 }
 

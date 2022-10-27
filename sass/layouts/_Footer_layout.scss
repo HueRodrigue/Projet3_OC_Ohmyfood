@@ -26,6 +26,10 @@ footer{
                 color: white;
             }
 
+            &_link:hover{
+                color: $tertiary_color;
+            }
+
             &_icon{
                 width: 20px;
                 height: 20px;
