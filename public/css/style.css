@@ -565,7 +565,6 @@ footer .footer_list_item_icon {
   }
   to {
     width: 150px;
-    transform: rotate(360);
   }
 }
 @keyframes shadow-hover {
