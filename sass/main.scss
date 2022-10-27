@@ -19,9 +19,9 @@
     main .explore_and_working_section .working_article{ 
         .working_article_list{
             @include column_parameter;
-    
+            
             &_item{
-                width: auto;
+                width: 80%;
             }
         }
     }
@@ -80,9 +80,7 @@
             .working_article {
                 &_list{
                     &_item{
-                        margin-left: 40px;
-                        margin-right: 40px;
-                        width: auto;
+                        width: 80%;
                     }
                 }
             }
