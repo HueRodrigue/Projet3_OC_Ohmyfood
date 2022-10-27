@@ -38,7 +38,7 @@
 }
 
 .loader {
-  /* Layout du loader ( a refaire ) */
+  /*Layout du loader ( a refaire ) */
   position: fixed;
   height: 100%;
   width: 100%;
@@ -55,31 +55,16 @@
 }
 
 .loader__item {
-  height: 20px;
-  width: 20px;
+  border: 16px solid rgb(147, 86, 220);
   border-radius: 50%;
-  animation: jump 1s;
-  animation-iteration-count: 1;
-}
-
-.loader__itemContainer {
-  display: flex;
-  width: 100px;
-  justify-content: space-between;
-}
-
-.loader__item--1 {
-  background-color: rgb(147, 86, 220);
-}
-
-.loader__item--2 {
-  background-color: rgb(153, 226, 208);
-  animation-delay: 0.25s;
-}
-
-.loader__item--3 {
-  background-color: #FF79DA;
-  animation-delay: 0.5s;
+  border-top: 16px solid rgb(147, 86, 220);
+  border-right: 16px solid #FF79DA;
+  border-bottom: 16px solid rgb(245, 237, 255);
+  border-left: 16px solid rgb(153, 226, 208);
+  width: 50px;
+  height: 50px;
+  -webkit-animation: spin 500ms linear infinite;
+  animation: spin 500ms linear infinite;
 }
 
 header {
