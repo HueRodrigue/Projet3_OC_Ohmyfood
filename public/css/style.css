@@ -541,6 +541,7 @@ footer .footer_list_item_icon {
 }
 .restaurant_main .btn:hover {
   animation: shadow-hover 500ms forwards;
+  background: linear-gradient(160deg, #f08ae0 0%, #ad70e0 100%);
 }
 
 /* Loader*/
