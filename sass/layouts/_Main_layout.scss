@@ -63,6 +63,7 @@ main{
             }
             .btn:hover{
                 animation : shadow-hover 500ms forwards;
+                background: linear-gradient(160deg,lighten( rgba(237,115,218), 5%) 0%,lighten(rgba(161,91,220), 5%) 100%);
             }
         }
     
@@ -223,11 +224,12 @@ main{
             
                         &_1:hover{
                             /* Parametre de l'animation du coeur*/
-                            background: linear-gradient(#FF79DA, #9356DC);
-                            -webkit-text-fill-color: transparent;
-                            -webkit-background-clip: text;
                             -webkit-text-stroke: 1px transparent;
-                            transition: 200ms ease-in-out;
+                            animation: fill 1s ease-out;
+                            background: linear-gradient(#FF79DA, #9356DC);
+                            -webkit-background-clip: text;
+                            -webkit-text-fill-color: transparent;
+                            font-weight: bold;
                         }
                     }
                 }

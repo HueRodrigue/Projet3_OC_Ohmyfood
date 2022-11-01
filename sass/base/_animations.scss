@@ -28,10 +28,14 @@
 }
 
 @keyframes spin { 
-  0%{
+  0%{z-index: -1;
     transform: rotate(0deg);
   }
+  10%{
+    z-index: 1;
+  }
   100%{
+    
     transform: rotate(360deg);
   }
 }
@@ -39,10 +43,22 @@
 
 @keyframes menu-apparition {
   0% {
-    transform: scale(0);
+    opacity: 0;
+    margin-top: 30px;
   }
   100% {
-    transform: scale(1);
+    margin-top: 20px;
+    opacity: 1;
   }
 }
+
+@keyframes fill{
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+
 

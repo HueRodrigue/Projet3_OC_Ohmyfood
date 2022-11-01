@@ -146,6 +146,7 @@ main .explore_and_working_section .explore_article .btn {
 }
 main .explore_and_working_section .explore_article .btn:hover {
   animation: shadow-hover 500ms forwards;
+  background: linear-gradient(160deg, #f08ae0 0%, #ad70e0 100%);
 }
 main .explore_and_working_section .explore_article > * {
   margin: 10px;
@@ -289,11 +290,12 @@ main .restaurants_section .restaurants_article_list .restaurants_list_item_descr
 }
 main .restaurants_section .restaurants_article_list .restaurants_list_item_description_heart_1:hover {
   /* Parametre de l'animation du coeur*/
-  background: linear-gradient(#FF79DA, #9356DC);
-  -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text;
   -webkit-text-stroke: 1px transparent;
-  transition: 200ms ease-in-out;
+  animation: fill 1s ease-out;
+  background: linear-gradient(#FF79DA, #9356DC);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
 }
 main .restaurants_section .restaurants_article_list .restaurants_list_item_badge {
   /* Parametre du badge nouveau d'un restaurant */
@@ -410,11 +412,12 @@ footer .footer_list_item_icon {
 }
 .restaurant_main .menu_section .main_title_heart_1:hover {
   /* Parametre de l'animation du coeur*/
-  background: linear-gradient(#FF79DA, #9356DC);
-  -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text;
   -webkit-text-stroke: 1px transparent;
-  transition: 200ms ease-in-out;
+  animation: fill 1s ease-out;
+  background: linear-gradient(#FF79DA, #9356DC);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
 }
 .restaurant_main .menu_section_entry, .restaurant_main .menu_section_dish, .restaurant_main .menu_section_dessert {
   /* Parametre des titres entrées plats desserts */
@@ -431,6 +434,7 @@ footer .footer_list_item_icon {
   width: 100%;
   height: 110px;
   border-radius: 15px;
+  overflow: hidden;
 }
 .restaurant_main .menu_section_entry .item_description, .restaurant_main .menu_section_dish .item_description, .restaurant_main .menu_section_dessert .item_description {
   /* Parametre des descriptions des plats */
@@ -461,55 +465,59 @@ footer .footer_list_item_icon {
   font-size: 25px;
 }
 .restaurant_main .menu_section_entry .item_validate, .restaurant_main .menu_section_dish .item_validate, .restaurant_main .menu_section_dessert .item_validate {
-  /* Parametre de la partie validation */
-  display: none;
+  /*Parametre de la partie validation */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: -150px;
   background-color: #99E2D0;
   color: #FFF;
   font-size: 30px;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
   height: 100%;
-  width: 0px;
+  width: 150px;
+  transition: margin-right 0.8s ease-in-out;
 }
 .restaurant_main .menu_section_entry .item:hover .item_validate, .restaurant_main .menu_section_dish .item:hover .item_validate, .restaurant_main .menu_section_dessert .item:hover .item_validate {
   /* Animation check */
   display: flex;
   align-items: center;
   justify-content: center;
-  animation: slide 2s forwards;
+  margin-right: 0;
 }
 .restaurant_main .menu_section_entry .item:hover .item_validate i, .restaurant_main .menu_section_dish .item:hover .item_validate i, .restaurant_main .menu_section_dessert .item:hover .item_validate i {
   animation: spin 2s;
 }
 .restaurant_main .menu_section_entry .item_1, .restaurant_main .menu_section_dish .item_1, .restaurant_main .menu_section_dessert .item_1 {
-  animation: menu-apparition 2s;
+  animation: menu-apparition 2s forwards;
 }
 .restaurant_main .menu_section_entry .item_2, .restaurant_main .menu_section_dish .item_2, .restaurant_main .menu_section_dessert .item_2 {
-  animation: menu-apparition 2.5s;
+  animation: menu-apparition 2.5s forwards;
 }
 .restaurant_main .menu_section_entry .item_3, .restaurant_main .menu_section_dish .item_3, .restaurant_main .menu_section_dessert .item_3 {
-  animation: menu-apparition 3s;
+  animation: menu-apparition 3s forwards;
 }
 .restaurant_main .menu_section_entry .item_4, .restaurant_main .menu_section_dish .item_4, .restaurant_main .menu_section_dessert .item_4 {
-  animation: menu-apparition 3.5s;
+  animation: menu-apparition 3.5s forwards;
 }
 .restaurant_main .menu_section_entry .item_5, .restaurant_main .menu_section_dish .item_5, .restaurant_main .menu_section_dessert .item_5 {
-  animation: menu-apparition 4s;
+  animation: menu-apparition 4s forwards;
 }
 .restaurant_main .menu_section_entry .item_6, .restaurant_main .menu_section_dish .item_6, .restaurant_main .menu_section_dessert .item_6 {
-  animation: menu-apparition 4.5s;
+  animation: menu-apparition 4.5s forwards;
 }
 .restaurant_main .menu_section_entry .item_7, .restaurant_main .menu_section_dish .item_7, .restaurant_main .menu_section_dessert .item_7 {
-  animation: menu-apparition 5s;
+  animation: menu-apparition 5s forwards;
 }
 .restaurant_main .menu_section_entry .item_8, .restaurant_main .menu_section_dish .item_8, .restaurant_main .menu_section_dessert .item_8 {
-  animation: menu-apparition 5.5s;
+  animation: menu-apparition 5.5s forwards;
 }
 .restaurant_main .menu_section_entry .item_9, .restaurant_main .menu_section_dish .item_9, .restaurant_main .menu_section_dessert .item_9 {
-  animation: menu-apparition 6s;
+  animation: menu-apparition 6s forwards;
 }
 .restaurant_main .menu_section_entry .item_10, .restaurant_main .menu_section_dish .item_10, .restaurant_main .menu_section_dessert .item_10 {
-  animation: menu-apparition 6.5s;
+  animation: menu-apparition 6.5s forwards;
 }
 .restaurant_main .main_submitbutton {
   /* Parametre du boutton de validation de commande */
@@ -562,7 +570,11 @@ footer .footer_list_item_icon {
 }
 @keyframes spin {
   0% {
+    z-index: -1;
     transform: rotate(0deg);
+  }
+  10% {
+    z-index: 1;
   }
   100% {
     transform: rotate(360deg);
@@ -570,10 +582,20 @@ footer .footer_list_item_icon {
 }
 @keyframes menu-apparition {
   0% {
-    transform: scale(0);
+    opacity: 0;
+    margin-top: 30px;
   }
   100% {
-    transform: scale(1);
+    margin-top: 20px;
+    opacity: 1;
+  }
+}
+@keyframes fill {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
 * {
