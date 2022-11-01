@@ -126,7 +126,7 @@
                     /*Parametre de la partie validation */
                     display: flex;
                     align-items: center;
-                justify-content: center;
+                    justify-content: center;
                     margin-right: -150px;
                     background-color: #99E2D0;
                     color: #FFF;
@@ -151,7 +151,7 @@
             }
 
             .item:hover .item_validate i{
-                animation: spin 2s;
+                animation: spin 1s;
             }
 
             
