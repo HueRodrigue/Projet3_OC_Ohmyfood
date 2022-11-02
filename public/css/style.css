@@ -487,7 +487,7 @@ footer .footer_list_item_icon {
   margin-right: 0;
 }
 .restaurant_main .menu_section_entry .item:hover .item_validate i, .restaurant_main .menu_section_dish .item:hover .item_validate i, .restaurant_main .menu_section_dessert .item:hover .item_validate i {
-  animation: spin 1s;
+  animation: spin 1.5s;
 }
 .restaurant_main .menu_section_entry .item_1, .restaurant_main .menu_section_dish .item_1, .restaurant_main .menu_section_dessert .item_1 {
   animation: menu-apparition 2s forwards;
@@ -571,11 +571,7 @@ footer .footer_list_item_icon {
 }
 @keyframes spin {
   0% {
-    z-index: -1;
     transform: rotate(0deg);
-  }
-  10% {
-    z-index: 1;
   }
   100% {
     transform: rotate(360deg);
