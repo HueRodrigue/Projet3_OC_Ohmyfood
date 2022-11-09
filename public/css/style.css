@@ -147,6 +147,7 @@ main .explore_and_working_section .explore_article .btn {
 main .explore_and_working_section .explore_article .btn:hover {
   animation: shadow-hover 500ms forwards;
   background: linear-gradient(160deg, #f08ae0 0%, #ad70e0 100%);
+  cursor: pointer;
 }
 main .explore_and_working_section .explore_article > * {
   margin: 10px;
@@ -178,6 +179,7 @@ main .explore_and_working_section .working_article_list_item {
   margin-right: auto;
   border-radius: 20px;
   width: 25%;
+  cursor: pointer;
 }
 main .explore_and_working_section .working_article_list_item_description {
   align-items: center;
@@ -542,6 +544,7 @@ footer .footer_list_item_icon {
 .restaurant_main .btn:hover {
   animation: shadow-hover 500ms forwards;
   background: linear-gradient(160deg, #f08ae0 0%, #ad70e0 100%);
+  cursor: pointer;
 }
 
 /* Loader*/
